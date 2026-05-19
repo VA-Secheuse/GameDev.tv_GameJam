@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bgcim32qoqlir"]
+
+[ext_resource type="Script" uid="uid://di7261l7377vi" path="res://game/systems/judge/judge.gd" id="1_rlqb2"]
+
+[node name="Judge" type="Node" unique_id=1024978133]
+script = ExtResource("1_rlqb2")

@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://4td3nuafx05e"]
+
+[ext_resource type="Script" uid="uid://ckkic2i45tc7p" path="res://game/systems/display/cellphone/cellphone.gd" id="1_33wg6"]
+[ext_resource type="Texture2D" uid="uid://c727vjxdnkr2m" path="res://assets/sprite/Cellphone.png" id="2_iw8gi"]
+[ext_resource type="LabelSettings" uid="uid://cs1svpb58fd0a" path="res://game/Ressources/text_style/normal_texting.tres" id="3_a62kn"]
+
+[node name="Cellphone" type="Node2D" unique_id=1026586180]
+script = ExtResource("1_33wg6")
+
+[node name="SpriteCellphone" type="Sprite2D" parent="." unique_id=710439333]
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_iw8gi")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1200597424]
+
+[node name="Label" type="Label" parent="." unique_id=199996144]
+offset_left = -282.0
+offset_top = 311.0
+offset_right = 231.0
+offset_bottom = 347.0
+label_settings = ExtResource("3_a62kn")
+
+[node name="SpawnMarkers" type="Node2D" parent="." unique_id=1851215886]
+
+[node name="Position1Start" type="Marker2D" parent="SpawnMarkers" unique_id=381934867]
+position = Vector2(-216, -233)
+
+[node name="Position2Start" type="Marker2D" parent="SpawnMarkers" unique_id=636006240]
+position = Vector2(-72, -233)
+
+[node name="Position3Start" type="Marker2D" parent="SpawnMarkers" unique_id=1921965396]
+position = Vector2(72, -230)
+
+[node name="Position4Start" type="Marker2D" parent="SpawnMarkers" unique_id=438922530]
+position = Vector2(216, -230)
+
+[node name="Position1End" type="Marker2D" parent="SpawnMarkers" unique_id=1012209769]
+position = Vector2(-216, 263)
+
+[node name="Position2End" type="Marker2D" parent="SpawnMarkers" unique_id=1648190760]
+position = Vector2(-76, 263)
+
+[node name="Position3End" type="Marker2D" parent="SpawnMarkers" unique_id=1357082582]
+position = Vector2(70, 263)
+
+[node name="Position4End" type="Marker2D" parent="SpawnMarkers" unique_id=1794941639]
+position = Vector2(216, 263)
+
+[node name="Position5End" type="Marker2D" parent="SpawnMarkers" unique_id=2107964597]
+position = Vector2(-1, 264)
+
+[node name="Position5Start" type="Marker2D" parent="SpawnMarkers" unique_id=82714404]
+position = Vector2(1, -231)
+
+[node name="TextBubble" type="Node2D" parent="." unique_id=2025756466]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=268473956]
+offset_left = -296.0
+offset_top = -277.0
+offset_right = 293.0
+offset_bottom = 234.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=1896607182]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1677644924]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Cue" type="Node2D" parent="." unique_id=222302288]

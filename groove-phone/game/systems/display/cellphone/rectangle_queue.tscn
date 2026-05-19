@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cticskcobtjbd"]
+
+[ext_resource type="Script" uid="uid://d2f31v3xo8aox" path="res://game/systems/display/cellphone/rectangle_queue.gd" id="1_n2i4r"]
+[ext_resource type="Texture2D" uid="uid://buovqamxawidh" path="res://assets/sprite/Buttons/Buttons_rectangle.png" id="2_euwb3"]
+[ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="3_euwb3"]
+[ext_resource type="Texture2D" uid="uid://bxt4tylopnufu" path="res://assets/sprite/Effect/Thumbs_up.png" id="4_8kobb"]
+[ext_resource type="Texture2D" uid="uid://d2snihkl5aq5" path="res://assets/sprite/Effect/WhiteOutlinepng.png" id="4_vgrtk"]
+[ext_resource type="Texture2D" uid="uid://ctmm1ddd1rva" path="res://assets/sprite/Effect/red_outline.png" id="6_xk10q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8kobb"]
+font = ExtResource("3_euwb3")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euwb3"]
+size = Vector2(126, 20)
+
+[node name="RectangleQueue" type="Node2D" unique_id=643924660]
+script = ExtResource("1_n2i4r")
+
+[node name="Rectangle" type="Sprite2D" parent="." unique_id=1123762828]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_euwb3")
+vframes = 5
+
+[node name="Label" type="Label" parent="." unique_id=247934539]
+visible = false
+offset_left = -84.0
+offset_top = -18.0
+offset_right = 78.0
+offset_bottom = 11.0
+text = "asdsadasdasd"
+label_settings = SubResource("LabelSettings_8kobb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1189189464]
+visible = false
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1081436716]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_euwb3")
+
+[node name="WhiteOutline" type="Sprite2D" parent="." unique_id=1927896528]
+visible = false
+texture_filter = 1
+position = Vector2(-3, 0)
+scale = Vector2(2.9, 2.9)
+texture = ExtResource("4_vgrtk")
+
+[node name="RedOutline" type="Sprite2D" parent="." unique_id=906587746]
+visible = false
+texture_filter = 1
+position = Vector2(3.0000002, 5.9604645e-08)
+scale = Vector2(2.9, 2.9)
+texture = ExtResource("6_xk10q")
+
+[node name="ThumbsStartingAnimation" type="Marker2D" parent="." unique_id=75823730]
+position = Vector2(72, -24)
+
+[node name="Thumbs" type="Sprite2D" parent="ThumbsStartingAnimation" unique_id=391798097]
+visible = false
+texture_filter = 1
+position = Vector2(3.0000005, -9)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("4_8kobb")
+vframes = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1563516402]

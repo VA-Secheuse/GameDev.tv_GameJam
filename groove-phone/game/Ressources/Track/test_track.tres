@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Track" format=3 uid="uid://df53jsgrfc5vx"]
+
+[ext_resource type="AudioStream" uid="uid://b88oeg1powhs2" path="res://assets/music/track1/first_track.mp3" id="1_5cbvw"]
+[ext_resource type="Script" uid="uid://b7rr1hmt81koj" path="res://game/Ressources/Track/track.gd" id="1_l5ldf"]
+[ext_resource type="JSON" path="res://game/Ressources/Track/chart.json" id="2_5cbvw"]
+
+[resource]
+script = ExtResource("1_l5ldf")
+track_name = "test"
+audio_stream = ExtResource("1_5cbvw")
+bmp = 264
+button_mapping = ExtResource("2_5cbvw")
+metadata/_custom_type_script = "uid://b7rr1hmt81koj"

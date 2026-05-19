@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d36l5pop6f1g7"]
+
+[ext_resource type="Script" uid="uid://ma7swjhgd0ib" path="res://game/levels/test_level/test.gd" id="1_58nft"]
+[ext_resource type="PackedScene" uid="uid://dvd5pvtlc5snd" path="res://game/systems/rhythm_manager/RhythmManager.tscn" id="2_1ih0b"]
+[ext_resource type="Texture2D" uid="uid://bpjceikdqr42d" path="res://assets/arrow.png" id="3_tkddk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ih0b"]
+font_size = 20
+
+[node name="Test" type="Node2D" unique_id=198005144 node_paths=PackedStringArray("Rhythm_manager")]
+script = ExtResource("1_58nft")
+Rhythm_manager = NodePath("RhythmManager")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=352305805]
+
+[node name="square1" type="ColorRect" parent="." unique_id=691518]
+offset_left = -330.0
+offset_top = -87.0
+offset_right = -144.0
+offset_bottom = 82.0
+pivot_offset = Vector2(-740, -372)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1568601469]
+offset_left = -87.0
+offset_top = -85.0
+offset_right = 87.0
+offset_bottom = 87.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=244672759]
+offset_left = 160.0
+offset_top = -84.0
+offset_right = 333.0
+offset_bottom = 84.0
+metadata/_edit_use_anchors_ = true
+
+[node name="RhythmManager" parent="." unique_id=775714445 instance=ExtResource("2_1ih0b")]
+
+[node name="Label" type="Label" parent="." unique_id=532141654]
+offset_left = -217.0
+offset_top = -250.0
+offset_right = 218.0
+offset_bottom = -183.0
+label_settings = SubResource("LabelSettings_1ih0b")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=1939958877]
+position = Vector2(-238, -201)
+rotation = 1.5622946
+scale = Vector2(0.48239744, 0.48003367)
+texture = ExtResource("3_tkddk")
+
+[connection signal="tmp_2" from="RhythmManager" to="." method="_on_rhythm_manager_tmp_2"]
+[connection signal="tmp_signal" from="RhythmManager" to="." method="_on_rhythm_manager_tmp_signal"]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b581502kbxsgw"]
+
+[ext_resource type="Script" uid="uid://etv1heid2psv" path="res://game/systems/player_input_reader/player_input_reader.gd" id="1_btosm"]
+
+[node name="PlayerInputReader" type="Node" unique_id=726161377]
+script = ExtResource("1_btosm")

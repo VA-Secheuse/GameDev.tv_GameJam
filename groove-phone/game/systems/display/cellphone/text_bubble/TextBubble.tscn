@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cblgslgbktfu"]
+
+[ext_resource type="Texture2D" uid="uid://bap3f3pcpsnpe" path="res://assets/sprite/text_bubble/text_bubble.png" id="1_0rx3c"]
+[ext_resource type="Script" uid="uid://drodskxxq1f5n" path="res://game/systems/display/cellphone/text_bubble/text_bubble.gd" id="1_rcg6n"]
+[ext_resource type="Shader" uid="uid://bi7ep52vo3ca4" path="res://game/systems/display/cellphone/text_bubble/TextBubbleNineTileRec.gdshader" id="2_ja45h"]
+[ext_resource type="LabelSettings" uid="uid://cs1svpb58fd0a" path="res://game/Ressources/text_style/normal_texting.tres" id="3_43s5s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_04enc"]
+shader = ExtResource("2_ja45h")
+shader_parameter/flip_h = false
+shader_parameter/flip_v = false
+
+[node name="TextBubble" type="MarginContainer" unique_id=1650157433]
+offset_right = 39.285713
+offset_bottom = 29.0
+scale = Vector2(0.84000003, 1)
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/margin_top = 0
+script = ExtResource("1_rcg6n")
+
+[node name="NinetTileRec" type="NinePatchRect" parent="." unique_id=1033608921]
+texture_filter = 1
+material = SubResource("ShaderMaterial_04enc")
+layout_mode = 2
+texture = ExtResource("1_0rx3c")
+region_rect = Rect2(14, 9, 21, 21)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 10
+patch_margin_bottom = 9
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=287928637]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = -3
+theme_override_constants/margin_right = 9
+theme_override_constants/margin_bottom = 9
+
+[node name="Text" type="Label" parent="MarginContainer" unique_id=266528598]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "a"
+label_settings = ExtResource("3_43s5s")

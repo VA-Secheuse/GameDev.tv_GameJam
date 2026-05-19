@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b533ktt3k56fu"]
+
+[ext_resource type="Script" uid="uid://clt3qt5psqs0a" path="res://game/systems/composer/composer.gd" id="1_s5tyc"]
+
+[node name="Composer" type="Node" unique_id=1104580046]
+script = ExtResource("1_s5tyc")

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://okymsrjx6pca"]
+
+[ext_resource type="Script" uid="uid://ds4u8ib2ea47x" path="res://game/systems/metronome/metronome.gd" id="1_gpyv3"]
+
+[node name="Metronome" type="Node" unique_id=1397747387]
+script = ExtResource("1_gpyv3")

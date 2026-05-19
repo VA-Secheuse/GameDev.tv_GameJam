@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6lmhan1lemyo"
+path="res://.godot/imported/Reggae - Drumless Track _ 138 BPM _ No Drums _ Backing Track Jam For Drummers.mp3-c5200437ec0bdb72185a319f5d2e9aef.mp3str"
+
+[deps]
+
+source_file="res://assets/music/test/Reggae - Drumless Track _ 138 BPM _ No Drums _ Backing Track Jam For Drummers.mp3"
+dest_files=["res://.godot/imported/Reggae - Drumless Track _ 138 BPM _ No Drums _ Backing Track Jam For Drummers.mp3-c5200437ec0bdb72185a319f5d2e9aef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
