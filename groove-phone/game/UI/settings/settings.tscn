@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://cngakcsnclqxq"]
+
+[ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="1_7ir4b"]
+[ext_resource type="Script" uid="uid://wep6hl2awtrf" path="res://game/UI/settings/settings.gd" id="1_68tq0"]
+[ext_resource type="PackedScene" uid="uid://w2g4frlewr48" path="res://game/UI/settings/volume_slider.tscn" id="2_84q56"]
+
+[node name="Settings" type="MarginContainer" unique_id=267474640]
+custom_minimum_size = Vector2(1280, 720)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_68tq0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1317599938]
+layout_mode = 2
+color = Color(0.16470589, 0.1254902, 0.2509804, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=331194086]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Settings" type="MarginContainer" parent="MarginContainer" unique_id=2038256075]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 18
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Settings" unique_id=1355277298]
+layout_mode = 2
+theme_override_constants/separation = 63
+
+[node name="Title" type="Label" parent="MarginContainer/Settings/VBoxContainer" unique_id=2003904355]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_7ir4b")
+theme_override_font_sizes/font_size = 100
+text = "Settings"
+
+[node name="VolumeSliders" type="VBoxContainer" parent="MarginContainer/Settings/VBoxContainer" unique_id=66766710]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Settings/VBoxContainer/VolumeSliders" unique_id=2027678051]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="MasterVolumeLabel" type="Label" parent="MarginContainer/Settings/VBoxContainer/VolumeSliders/VBoxContainer" unique_id=1705587427]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_7ir4b")
+theme_override_font_sizes/font_size = 50
+text = "Master Volume"
+
+[node name="MasterVolume" parent="MarginContainer/Settings/VBoxContainer/VolumeSliders/VBoxContainer" unique_id=1859666159 instance=ExtResource("2_84q56")]
+layout_mode = 2
+bus_name = "Master"
+
+[node name="Music" type="VBoxContainer" parent="MarginContainer/Settings/VBoxContainer/VolumeSliders" unique_id=1713482730]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="MusicLabel" type="Label" parent="MarginContainer/Settings/VBoxContainer/VolumeSliders/Music" unique_id=1239202553]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_7ir4b")
+theme_override_font_sizes/font_size = 50
+text = "Music Volume"
+
+[node name="Music" parent="MarginContainer/Settings/VBoxContainer/VolumeSliders/Music" unique_id=410695211 instance=ExtResource("2_84q56")]
+layout_mode = 2
+bus_name = "music"
+
+[node name="SFX" type="VBoxContainer" parent="MarginContainer/Settings/VBoxContainer/VolumeSliders" unique_id=972576703]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="SFXLabel" type="Label" parent="MarginContainer/Settings/VBoxContainer/VolumeSliders/SFX" unique_id=1737854699]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_7ir4b")
+theme_override_font_sizes/font_size = 50
+text = "SFX Volume"
+
+[node name="SFX" parent="MarginContainer/Settings/VBoxContainer/VolumeSliders/SFX" unique_id=1389790137 instance=ExtResource("2_84q56")]
+layout_mode = 2
+bus_name = "sfx"
+
+[node name="UnlosableMode" type="HBoxContainer" parent="MarginContainer/Settings/VBoxContainer" unique_id=1802655292]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="MarginContainer/Settings/VBoxContainer/UnlosableMode" unique_id=700742651]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_7ir4b")
+theme_override_font_sizes/font_size = 50
+text = "Unlosable Mode :"
+
+[node name="Button" type="Button" parent="MarginContainer/Settings/VBoxContainer/UnlosableMode" unique_id=2133673323]
+texture_filter = 1
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_7ir4b")
+theme_override_font_sizes/font_size = 50
+text = "NO"
+
+[node name="BackButton" type="MarginContainer" parent="MarginContainer" unique_id=310297433]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Back" type="Button" parent="MarginContainer/BackButton" unique_id=553410336]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("1_7ir4b")
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/Settings/VBoxContainer/UnlosableMode/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/BackButton/Back" to="." method="_on_back_pressed"]

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://w2g4frlewr48"]
+
+[ext_resource type="Script" uid="uid://bou7u10nqlnfu" path="res://game/UI/settings/volume_slider.gd" id="1_23id4"]
+
+[node name="VolumeSlider" type="HSlider" unique_id=1859666159]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_23id4")

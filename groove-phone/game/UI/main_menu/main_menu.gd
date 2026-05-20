@@ -1,4 +1,5 @@
 extends MarginContainer
+class_name MainMenu
 
 signal play_pressed
 signal how_to_play_pressed
@@ -17,9 +18,9 @@ func _on_how_to_play_pressed() -> void:
 
 func _on_settings_pressed() -> void:
 	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
-	settings_pressed.emit()
+	Global.setting.open_setting_menu()
 
 
 func _on_exit_pressed() -> void:
 	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
-	exit_pressed.emit()
+	get_tree().quit()

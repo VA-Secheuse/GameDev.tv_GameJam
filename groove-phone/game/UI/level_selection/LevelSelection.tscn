@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bstyyeojum6ik"]
+
+[ext_resource type="Texture2D" uid="uid://dyns8jaw0gnq1" path="res://assets/sprite/Cellphone_full_art.png" id="1_vhirw"]
+
+[node name="TextureRect" type="NinePatchRect" unique_id=471801575]
+texture_filter = 1
+offset_left = 2.0
+offset_top = 488.0
+offset_right = 245.0
+offset_bottom = 1039.5
+rotation = -1.5707964
+scale = Vector2(2, 2)
+texture = ExtResource("1_vhirw")
+region_rect = Rect2(0, 0, 260, 375)
+patch_margin_left = 200
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Control" type="Control" parent="." unique_id=916581248]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://5ywvh85inlyp" path="res://assets/sprite/BackGround.png" id="1_k6v4s"]
 [ext_resource type="Script" uid="uid://dhvg2lllaxvk8" path="res://game/UI/main_menu/main_menu.gd" id="1_rmjxk"]
 [ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="2_8ovyh"]
+[ext_resource type="Texture2D" uid="uid://dyns8jaw0gnq1" path="res://assets/sprite/Cellphone_full_art.png" id="3_ku3nx"]
 
 [node name="MainMenu" type="MarginContainer" unique_id=581755862]
 anchors_preset = 15
@@ -29,14 +30,15 @@ theme_override_constants/margin_right = 300
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/Panel" unique_id=2037495084]
-custom_minimum_size = Vector2(400, 0)
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Panel" unique_id=1904345023]
+texture_filter = 1
 layout_mode = 0
-offset_left = -200.0
-offset_right = 200.0
-offset_bottom = 720.0
-size_flags_vertical = 3
-color = Color(0.16470589, 0.1254902, 0.2509804, 1)
+offset_left = -221.0
+offset_top = 0.99999976
+offset_right = 39.0
+offset_bottom = 376.0
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("3_ku3nx")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel" unique_id=1763734656]
 layout_mode = 1
@@ -46,13 +48,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 0
-theme_override_constants/margin_top = 230
+theme_override_constants/margin_top = 157
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer" unique_id=890191493]
 layout_mode = 2
-theme_override_constants/separation = 60
+theme_override_constants/separation = 49
 
 [node name="Play" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1599093636]
 custom_minimum_size = Vector2(300, 0)
@@ -79,16 +81,8 @@ theme_override_fonts/font = ExtResource("2_8ovyh")
 theme_override_font_sizes/font_size = 45
 text = "Exit"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Panel" unique_id=676122153]
-layout_mode = 0
-offset_left = -84.0
-offset_top = 38.0
-offset_right = 126.0
-offset_bottom = 174.0
-theme_override_fonts/normal_font = ExtResource("2_8ovyh")
-theme_override_font_sizes/normal_font_size = 70
-text = "GROOVE 
-PHONE"
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=315512710]
+layout_mode = 2
 
 [connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]

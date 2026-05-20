@@ -4,3 +4,6 @@
 
 [node name="RhythmManager" type="Node2D" unique_id=849755052]
 script = ExtResource("1_1h8rv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=576925891]
+position = Vector2(2, 0)
