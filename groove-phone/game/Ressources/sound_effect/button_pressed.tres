@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://dlbhy0fm5v5dy"]
+
+[ext_resource type="Script" uid="uid://bwkxhfeoqr307" path="res://game/Ressources/sound_effect.gd" id="1_p0imt"]
+[ext_resource type="AudioStream" uid="uid://qyw05y175k2y" path="res://assets/sound_effect/button_clicked.mp3" id="2_hs5lc"]
+
+[resource]
+script = ExtResource("1_p0imt")
+sound_effect = ExtResource("2_hs5lc")
+metadata/_custom_type_script = "uid://bwkxhfeoqr307"

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="GroovePhone"
-run/main_scene="uid://dvd5pvtlc5snd"
+run/main_scene="uid://brf5x3h8nueko"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://bwkprnpfiwbal"
 
 [display]
 

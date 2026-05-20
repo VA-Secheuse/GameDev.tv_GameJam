@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://brf5x3h8nueko"]
+
+[ext_resource type="Script" uid="uid://dyg3101hsndij" path="res://game/systems/game_manager/game_manager.gd" id="1_s0p2p"]
+[ext_resource type="PackedScene" uid="uid://dvd5pvtlc5snd" path="res://game/systems/rhythm_manager/RhythmManager.tscn" id="2_0gcvh"]
+[ext_resource type="Texture2D" uid="uid://5ywvh85inlyp" path="res://assets/sprite/BackGround.png" id="3_0bm1t"]
+[ext_resource type="PackedScene" uid="uid://b8r5chlb3ho6f" path="res://game/UI/main_menu/MainMenu.tscn" id="4_6ycib"]
+
+[node name="GameManager" type="Node2D" unique_id=1885611691]
+script = ExtResource("1_s0p2p")
+
+[node name="RhythmManager" parent="." unique_id=775714445 instance=ExtResource("2_0gcvh")]
+
+[node name="BackGround" type="Sprite2D" parent="." unique_id=732375146]
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_0bm1t")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=906647384]
+
+[node name="MainMenu" parent="." unique_id=581755862 instance=ExtResource("4_6ycib")]
+offset_left = 45.0
+offset_top = -360.0
+offset_right = 645.0
+offset_bottom = 360.0
+
+[connection signal="exit_pressed" from="MainMenu" to="." method="_on_main_menu_exit_pressed"]

@@ -4,12 +4,17 @@ static var cellphone_scene_path : String = "res://game/systems/display/cellphone
 var cur_rectangle : RectangleQueue
 var rectangle_array : Array = []
 
+var rhythm_manager : RhythmManager
+
+
 @onready var text_bubble_container  =$MarginContainer/ScrollContainer/VBoxContainer
 @onready var scroll = $MarginContainer/ScrollContainer
 var cur_sentence : String
 var old_sentence : String = ""
 var cur_word : String
 var cur_letter : int = 0
+var cur_recipient_sentence : String = ""
+var info
 
 var timer : Timer
 
@@ -63,7 +68,6 @@ func _pop_rectangle_for_beat(beat : int) -> RectangleQueue:
 	return null
 
 func show_next_player_word(word : String, in_ms : float):
-	
 	cur_word = word
 	cur_letter = 0
 	
@@ -109,10 +113,20 @@ func send_player_message_in(in_ms : float):
 	pass
 
 func send_player_message(success : bool):
-	pass
+	flicker_animation()
+	self._new_player_speak_bubble(self.cur_sentence)
+	$Label.text = ''
+	cur_sentence = ''
+	old_sentence=''
+	cur_word =''
 
-func send_recipient_messages(sentence : Array):
-	pass
+func send_recipient_messages(sentences: Array, beat_ms: float):
+	_recipient_writing_bubble(beat_ms,sentences.size())
+
+	for sentence in sentences:
+		await info.animation_finished
+		_new_recipient_speak_bubble(sentence)
+		
 
 func _on_success(beat : int):
 	var rec = _pop_rectangle_for_beat(beat)
@@ -133,15 +147,32 @@ func _on_failure(beat : int):
 func _new_player_speak_bubble(text : String):
 	var new_bubble = TextBubble.create_text_bubble(text_bubble_container)
 	new_bubble.size_flags_horizontal = Control.SIZE_SHRINK_END
-	new_bubble.set_text(text)
-	await new_bubble.ready_to_position  # now size.x/y are correct
+	new_bubble.set_text(text,true)
+	await new_bubble.ready_to_position
 	await get_tree().process_frame
 	scroll.scroll_vertical = scroll.get_v_scroll_bar().max_value
 
 func _new_recipient_speak_bubble(text : String) :
 	var new_bubble = TextBubble.create_text_bubble(text_bubble_container)
-	new_bubble.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
-	new_bubble.set_text(text)
-	await new_bubble.ready_to_position  # now size.x/y are correct
+	new_bubble.set_text(text, false)
+	text_bubble_container.move_child(info, -1)
+	await new_bubble.ready_to_position
 	await get_tree().process_frame
 	scroll.scroll_vertical = scroll.get_v_scroll_bar().max_value
+
+func _recipient_writing_bubble(beat_ms: float, repeat: int):
+	self.info = RecipientTextInfo.create_text_info(text_bubble_container)
+	text_bubble_container.move_child(info, -1)
+	info.start_dot_animation(repeat)
+	rhythm_manager.beat_changed.connect(info.on_music_beat)
+	await info.ready_to_position
+	return info
+
+func set_rhythm_manager(rhythm_manager : RhythmManager):
+	self.rhythm_manager = rhythm_manager
+
+func flicker_animation():
+	var tween = create_tween()
+	var flicker_deg : float = randf_range(1.0,1.5)
+	tween.tween_property(self,'rotation_degrees',flicker_deg,0.1)
+	tween.tween_property(self,'rotation_degrees',0,0.1)

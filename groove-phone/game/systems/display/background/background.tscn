@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://w1yaxudx8gnc"]
+
+[ext_resource type="Script" uid="uid://bfcjd6ajafdtw" path="res://game/systems/display/background/background.gd" id="1_dbbv1"]
+[ext_resource type="Texture2D" uid="uid://5ywvh85inlyp" path="res://assets/sprite/BackGround.png" id="1_wno5q"]
+
+[node name="Background" type="Node2D" unique_id=1656179431]
+script = ExtResource("1_dbbv1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1082120421]
+texture = ExtResource("1_wno5q")

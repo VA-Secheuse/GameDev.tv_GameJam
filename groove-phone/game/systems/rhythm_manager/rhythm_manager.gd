@@ -1,4 +1,6 @@
-class_name RhythmManager extends Node
+class_name RhythmManager extends Node2D
+
+var current_track : Track
 
 var player_input_reader : PlayerInputReader
 var music_player : MusicPlayer
@@ -11,6 +13,7 @@ var text_composer : TextComposer
 var time_position_ms : float
 var cur_beat : int = 0
 
+signal beat_changed()
 signal tmp_signal()
 signal tmp_2(message)
 
@@ -20,7 +23,7 @@ func _init() -> void:
 	self._create_and_associate_components()
 
 func _ready() -> void:
-	change_music(load("res://game/Ressources/Track/test_track.tres"))
+	change_music(load("res://game/Ressources/Track/act_3_track/act_3_track.tres"))
 
 func _process(delta: float) -> void:
 	if(Input.is_action_just_pressed('Enter')):
@@ -68,6 +71,7 @@ func _create_and_associate_components() -> void :
 	##This create and connect the display
 	tmp_scene = load(CellPhone.cellphone_scene_path)
 	cellphone = tmp_scene.instantiate()
+	cellphone.set_rhythm_manager(self)
 	judge.failure.connect(cellphone._on_failure)
 	judge.success.connect(cellphone._on_success)
 	show_next_cue.connect(cellphone._show_next_cue)
@@ -83,16 +87,20 @@ func _create_and_associate_components() -> void :
 
 ##This change the music in the music player
 func change_music(track : Track) -> void :
+	self.current_track = track
 	music_player.set_music(track)
 	metronome.set_track_bmp(track)
 	composer.map_buttons(track)
-	text_composer.start_text_composer()
+	text_composer.start_text_composer(track)
 
 func start_level():
 	metronome.start_metronome()
 	music_player.start_track()
+	var one_beat_before_start = self.when_is_next_input()[1] - metronome.beat_duration_ms
+	text_composer.start_sentence_in(one_beat_before_start,true)
 
 func _beat_changed(message : String, beat : int,travel_time : float):
+	self.beat_changed.emit()
 	self.cur_beat = beat
 	if composer.get_associated_beat_info(cur_beat)['type'] == 'fin':
 		stop_beat_game()

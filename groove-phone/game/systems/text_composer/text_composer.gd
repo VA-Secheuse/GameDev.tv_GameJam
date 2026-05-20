@@ -3,22 +3,22 @@ class_name TextComposer extends Node
 static var text_composer_scene_path : String = "res://game/systems/text_composer/TextComposer.tscn"
 
 var rhythm_manager: RhythmManager
-
 var cellphone : CellPhone
 
-
-var player_sentence_array : Array = [{'is_end':'yes','sentence':["lopopeloas",'you', 'like','potato']}]
+var player_sentence_array : Array 
 var cur_player_dialogue : int = 0
 var cur_player_dialogue_word : int = 0
 var cur_player_sentence : Dictionary
 
+var recipient_sentence_array : Array
+var cur_recipient_dialogue : int = 0
 
 var who_is_typing : String = 'player'
 
-var recipient_sentence_array : Array = [{'is_end':"no",'sentence' : "no i dont like potato"},{'is_end':"yes",'sentence' :"i love permesean"}]
-var cur_recipient_dialogue : int = 0
-
-func start_text_composer():
+func start_text_composer(track : Track):
+	var dialogue_dic : Dictionary = JsonFormating.dialogue_mapping_to_array(track)
+	player_sentence_array = dialogue_dic["P"]
+	recipient_sentence_array = dialogue_dic["R"]
 	cur_player_sentence = player_sentence_array[cur_player_dialogue]
 
 func set_rhythm_manager(rhythm_manager):
@@ -56,12 +56,12 @@ func next_recipient_sentences(beat_ms : float):
 	##error handling
 	if recipient_sentence_array.size() <= cur_recipient_dialogue:
 		return
-	
 	while true :
 		if recipient_sentence_array[cur_recipient_dialogue]['is_end'] == 'yes' :
 			sentences.append(recipient_sentence_array[cur_recipient_dialogue]['sentence'])
 			cur_recipient_dialogue += 1
-			cellphone.send_recipient_messages(sentences)
+			self._recipient_last_message_sent()
+			cellphone.send_recipient_messages(sentences,beat_ms)
 			break
 		elif recipient_sentence_array[cur_recipient_dialogue]['is_end'] == 'no':
 			sentences.append(recipient_sentence_array[cur_recipient_dialogue]['sentence'])
@@ -71,14 +71,23 @@ func next_recipient_sentences(beat_ms : float):
 
 func _recipient_last_message_sent() :
 	who_is_typing = 'player'
+	next_player_word()
 
 func input_pressed_and_checked(success : bool,button : String,beat_ms : float):
 	if button == 'send' && who_is_typing == 'recipient':
 		cellphone.send_player_message(success)
 		next_recipient_sentences(beat_ms)
-	if button == 'send' && who_is_typing == 'player':
+	elif button == 'send' && who_is_typing == 'player':
 		cellphone.send_player_message(success)
+		next_player_word()
 	else :
 		cellphone.finish_current_word(success)
 		next_player_word()
-	
+
+func start_sentence_in(time_ms : float, player : bool):
+	var timer : Timer = Timer.new()
+	timer.autostart = false
+	timer.one_shot = true
+	timer.timeout.connect(self.next_player_word)
+	add_child(timer)
+	timer.start()

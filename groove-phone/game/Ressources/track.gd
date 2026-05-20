@@ -4,3 +4,4 @@ class_name Track extends Resource
 @export var audio_stream : AudioStream 
 @export var bmp : int
 @export var button_mapping : JSON
+@export var dialogue_file : JSON
