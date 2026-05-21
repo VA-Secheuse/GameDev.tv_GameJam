@@ -25,11 +25,19 @@ func _set_text(text : String):
 
 var move_tween : Tween
 
+
 func move_to(target_pos: Vector2, duration: float):
 	move_tween = create_tween()
 	modulate.a = 0.1
-	move_tween.tween_property(self, "position", target_pos, duration)
-	move_tween.parallel().tween_property(self, "modulate:a", 0.7, duration) 
+	
+	var margin_duration = Global.current_rhythm_manager.current_track.margin /1000
+	var total_duration = duration + margin_duration
+	
+	# Velocity based on start→target, continue past target at same speed
+	var velocity = (target_pos - self.position) / duration
+	var final_pos = target_pos + velocity * margin_duration
+	move_tween.tween_property(self, "position", final_pos, total_duration)
+	move_tween.parallel().tween_property(self, "modulate:a", 0.7, duration)
 
 func success_animation():
 	if move_tween: move_tween.kill() 
@@ -61,3 +69,7 @@ func failed_animation():
 	var shake_tween = create_tween()
 	shake_tween.tween_property($ThumbsStartingAnimation, "position", original_pos + Vector2(randf_range(3.0, 6.0), randf_range(-3.0, -6.0)), 0.6)
 	tween.tween_callback(func(): queue_free())
+
+func get_height():
+	return $Rectangle.texture.get_height()
+	

@@ -9,7 +9,8 @@
 script = ExtResource("1_l5ldf")
 track_name = "test"
 audio_stream = ExtResource("1_5cbvw")
-bmp = 264
+bmp = 132
+margin = 400.0
 button_mapping = ExtResource("2_5cbvw")
 dialogue_file = ExtResource("3_nmtnu")
 metadata/_custom_type_script = "uid://b7rr1hmt81koj"

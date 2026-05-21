@@ -29,6 +29,10 @@ func _process(delta: float) -> void:
 	if can_lauch && mouse_in && Input.is_action_just_pressed('left_click'):
 		bubble_flicker.kill()
 		start_first_act.emit()
+		can_lauch = false
+		mouse_in = false
+	if can_lauch && Input.is_action_just_pressed('pause'):
+		Global.pause_menu.open_pause_menu()
 
 func first_act_start_animation() -> void:
 	notif_bubble.visible = true

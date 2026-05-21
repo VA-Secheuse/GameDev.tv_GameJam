@@ -21,10 +21,6 @@ signal tmp_2(message)
 
 signal show_next_cue(interval : float, beat_info : Array)
 
-func _init() -> void:
-	self._create_and_associate_components()
-
-
 func _create_and_associate_components() -> void :
 	var tmp_scene : PackedScene
 	
@@ -82,14 +78,16 @@ func _create_and_associate_components() -> void :
 	add_child(text_composer)
 
 ##This change the music in the music player
-func change_music(track : Track) -> void :
+func load_level(track : Track) -> void :
+	await _create_and_associate_components()
 	self.current_track = track
 	music_player.set_music(track)
 	metronome.set_track_bmp(track)
 	composer.map_buttons(track)
-	text_composer.start_text_composer(track)
+	await text_composer.start_text_composer(track)
 
 func start_level():
+	self.visible = true
 	metronome.start_metronome()
 	music_player.start_track()
 	var one_beat_before_start = self.when_is_next_input()[1] - metronome.beat_duration_ms
@@ -143,3 +141,29 @@ func when_is_next_input() -> Array:
 ##this stop the metronome
 func stop_beat_game():
 	metronome.stop_metronome()
+
+func restart_level():
+	await exit_level()
+	await load_level(current_track)
+	await start_level()
+
+func exit_level():
+	cur_beat = 0
+	time_position_ms = 0.0
+	self.visible = false
+	if show_next_cue.is_connected(cellphone._show_next_cue):
+		show_next_cue.disconnect(cellphone._show_next_cue)
+	if judge.failure.is_connected(cellphone._on_failure):
+		judge.failure.disconnect(cellphone._on_failure)
+	if judge.success.is_connected(cellphone._on_success):
+		judge.success.disconnect(cellphone._on_success) 
+	music_player.stop_track()
+	player_input_reader.queue_free()
+	music_player.queue_free()
+	metronome.queue_free() 
+	composer.queue_free()
+	judge.queue_free()
+	cellphone.queue_free() 
+	text_composer.queue_free() 
+	
+	

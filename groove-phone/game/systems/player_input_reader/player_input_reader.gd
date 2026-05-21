@@ -15,3 +15,5 @@ func _process(delta: float) -> void:
 		input_pressed.emit(3)
 	elif(Input.is_action_just_pressed("space")) :
 		input_pressed.emit(4)
+	elif(Input.is_action_just_pressed("pause")):
+		Global.pause_menu.open_pause_menu()

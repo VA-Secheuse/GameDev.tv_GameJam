@@ -6,7 +6,5 @@
 script = ExtResource("1_1h8rv")
 left_corner = NodePath("LeftCorner")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=776648072]
-
 [node name="LeftCorner" type="Marker2D" parent="." unique_id=1996854806]
 position = Vector2(-325, -345)

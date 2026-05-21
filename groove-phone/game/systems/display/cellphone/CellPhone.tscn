@@ -36,19 +36,19 @@ position = Vector2(72, -230)
 position = Vector2(216, -230)
 
 [node name="Position1End" type="Marker2D" parent="SpawnMarkers" unique_id=1012209769]
-position = Vector2(-216, 263)
+position = Vector2(-217, 260)
 
 [node name="Position2End" type="Marker2D" parent="SpawnMarkers" unique_id=1648190760]
-position = Vector2(-76, 263)
+position = Vector2(-76, 259)
 
 [node name="Position3End" type="Marker2D" parent="SpawnMarkers" unique_id=1357082582]
-position = Vector2(70, 263)
+position = Vector2(70, 260)
 
 [node name="Position4End" type="Marker2D" parent="SpawnMarkers" unique_id=1794941639]
-position = Vector2(216, 263)
+position = Vector2(214, 260)
 
 [node name="Position5End" type="Marker2D" parent="SpawnMarkers" unique_id=2107964597]
-position = Vector2(-1, 264)
+position = Vector2(0, 259)
 
 [node name="Position5Start" type="Marker2D" parent="SpawnMarkers" unique_id=82714404]
 position = Vector2(1, -231)

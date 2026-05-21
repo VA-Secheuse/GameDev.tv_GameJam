@@ -5,7 +5,7 @@ class_name GameManager
 @export var start_level_phone : StartLevelPhone
 
 func _ready() -> void:
-	await self._create_and_connect_components()
+	self._create_and_connect_components()
 	Global.sound_manager.play_main_menu_music()
 	$RhythmManager.visible = false
 
@@ -55,6 +55,12 @@ func _create_and_connect_components() -> void :
 	
 	##this associate the act selection the the global variable
 	Global.act_selection = $UI/ActSelectionMenu
+	
+	##this associate the pause menu to the global variable
+	Global.pause_menu = $UI/PauseMenu
+	
+	##this associate the RhythmManger to the global variable
+	Global.current_rhythm_manager = $RhythmManager
 
 func prep_first_act() -> void:
 	var timer : Timer = Timer.new()
@@ -67,9 +73,10 @@ func prep_first_act() -> void:
 	start_level_phone.visible = true
 	Global.sound_manager.stop_main_menu_music()
 	timer.start()
-	$RhythmManager.change_music(load("res://game/Ressources/Track/act_3_track/act_3_track.tres"))
+	
 
 func start_first_act() -> void:
+	await $RhythmManager.load_level(load("res://game/Ressources/Track/act_3_track/act_3_track.tres"))
 	await start_level_phone.scale_to($RhythmManager.left_corner.global_position,Vector2(2.5,2.5),0.5)
 	$RhythmManager.visible = true
 	$RhythmManager.start_level()

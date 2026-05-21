@@ -8,7 +8,7 @@ var last_beat : int
 var next_beat_position : float
 var active_beat : int = -1
 var window_beat : int = -1
-var margin_ms : int = 150
+var margin_ms : int = 200
 var active_beat_start_position : float
 var active_beat_end_position : float
 var enter_emitted : bool = false
@@ -25,11 +25,12 @@ signal exit_beat(beat : int)
 func set_track_bmp(track : Track) -> void :
 	self.track_bmp = track.bmp
 	self.beat_duration_ms = (60.0 / self.track_bmp) * 1000.0
+	self.margin_ms = track.margin
 	self.last_beat = 0
-	self.travel_time_sec = (beat_duration_ms * 8.0) /1000.0
+	self.travel_time_sec = (beat_duration_ms * 8.0) /1000.0 
 	self.next_beat_position = beat_duration_ms
-	self.active_beat_start_position = self.next_beat_position - self.margin_ms  * 2
-	self.active_beat_end_position = self.next_beat_position + self.margin_ms
+	self.active_beat_start_position = self.next_beat_position - self.margin_ms  
+	self.active_beat_end_position = self.next_beat_position + self.margin_ms 
 	self.enter_emitted = false
 
 func set_rhythm_manager(Rhythm_manager : RhythmManager):

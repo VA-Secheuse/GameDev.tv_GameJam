@@ -35,23 +35,27 @@ func make_rectangle_fall_at_target_row(row_number : int , square_color : String,
 	$Cue.add_child(rectangle_cue)
 	rectangle_array.push_back(rectangle_cue)
 	
+	var height_offset: float = rectangle_cue.get_height()/4
+	
+	var start_pos: Vector2
+	var end_pos: Vector2
 	match row_number:
 		1:
 			rectangle_cue.position = $SpawnMarkers/Position1Start.position
-			rectangle_cue.move_to($SpawnMarkers/Position1End.position,time_of_falling)
+			rectangle_cue.move_to($SpawnMarkers/Position1End.position - Vector2(0, height_offset),time_of_falling)
 		2:
 			rectangle_cue.position = $SpawnMarkers/Position2Start.position
-			rectangle_cue.move_to($SpawnMarkers/Position2End.position,time_of_falling)
+			rectangle_cue.move_to($SpawnMarkers/Position2End.position - Vector2(0, height_offset) ,time_of_falling)
 		3:
 			rectangle_cue.position = $SpawnMarkers/Position3Start.position
-			rectangle_cue.move_to($SpawnMarkers/Position3End.position,time_of_falling)
+			rectangle_cue.move_to($SpawnMarkers/Position3End.position- Vector2(0, height_offset) ,time_of_falling)
 		4:
 			rectangle_cue.position = $SpawnMarkers/Position4Start.position
-			rectangle_cue.move_to($SpawnMarkers/Position4End.position,time_of_falling)
+			rectangle_cue.move_to($SpawnMarkers/Position4End.position - Vector2(0, height_offset),time_of_falling)
 		5:
 			rectangle_cue.position = $SpawnMarkers/Position5Start.position
-			rectangle_cue.move_to($SpawnMarkers/Position5End.position,time_of_falling)
-			print('hugaakkak')
+			rectangle_cue.move_to($SpawnMarkers/Position5End.position - Vector2(0, height_offset) ,time_of_falling)
+		
 	return rectangle_cue
 
 func _show_next_cue(time : float,beat_info : Dictionary):

@@ -20,8 +20,8 @@ color = Color(0.16470589, 0.1254902, 0.2509804, 1)
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=331194086]
 layout_mode = 2
 theme_override_constants/margin_left = 30
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
 
 [node name="Settings" type="MarginContainer" parent="MarginContainer" unique_id=2038256075]
 layout_mode = 2

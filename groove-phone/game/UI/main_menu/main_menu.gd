@@ -31,6 +31,10 @@ func _on_exit_pressed() -> void:
 	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
 	get_tree().quit()
 
+func open():
+	self.visible = true
+	Global.sound_manager.play_main_menu_music()
+
 func flip_to(target_top_left: Vector2, target_rotation_deg: float) -> void:
 	var cur_menu_pos = self.global_position
 	var cur_deg = self.rotation_degrees
