@@ -72,3 +72,11 @@ func _on_back_pressed() -> void:
 	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
 	await flip_to(Global.main_menu.left_corner.global_position,90.0)
 	Global.main_menu.visible = true
+
+
+func _on_back_mouse_entered() -> void:
+	$MarginContainer2/back.material.set_shader_parameter("outline_width", 1.5)
+
+
+func _on_back_mouse_exited() -> void:
+	$MarginContainer2/back.material.set_shader_parameter("outline_width", 0.0)

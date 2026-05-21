@@ -70,7 +70,7 @@ func prep_first_act() -> void:
 	timer.timeout.connect(start_level_phone.first_act_start_animation)
 	timer.timeout.connect(timer.queue_free)
 	add_child(timer)
-	start_level_phone.visible = true
+	start_level_phone.open()
 	Global.sound_manager.stop_main_menu_music()
 	timer.start()
 	

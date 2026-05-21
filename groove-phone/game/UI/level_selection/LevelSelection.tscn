@@ -2,6 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://cnp6f8mhsnus3" path="res://assets/Cellphone_full_art_sideway.png" id="1_vhirw"]
 [ext_resource type="Script" uid="uid://bhexbfnsv3u3g" path="res://game/UI/level_selection/level_selection.gd" id="2_joefn"]
+[ext_resource type="Shader" uid="uid://dxjelj6hl35p" path="res://game/UI/start_level/StartLevelPhone.gdshader" id="3_7p5fm"]
+[ext_resource type="Texture2D" uid="uid://cje0gnekugw46" path="res://assets/sprite/Buttons/Fleche_back.png" id="3_70x7a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l23jo"]
+shader = ExtResource("3_7p5fm")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(0.53306544, 0.7936908, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7p5fm"]
+texture = ExtResource("3_70x7a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l23jo"]
+texture = ExtResource("3_70x7a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5i3bd"]
+texture = ExtResource("3_70x7a")
 
 [node name="ActSelectionMenu" type="TextureRect" unique_id=1748351499 node_paths=PackedStringArray("left_corner")]
 texture_filter = 1
@@ -58,12 +74,19 @@ theme_override_constants/margin_left = 34
 theme_override_constants/margin_top = 18
 
 [node name="back" type="Button" parent="MarginContainer2" unique_id=322730247]
+texture_filter = 1
+material = SubResource("ShaderMaterial_l23jo")
+custom_minimum_size = Vector2(40, 30)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-text = "Back"
+theme_override_styles/normal = SubResource("StyleBoxTexture_7p5fm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_l23jo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5i3bd")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Act1" to="." method="_on_act_1_pressed"]
 [connection signal="button_down" from="MarginContainer/HBoxContainer/Act2" to="." method="_on_act_2_button_down"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Act3" to="." method="_on_act_3_pressed"]
+[connection signal="mouse_entered" from="MarginContainer2/back" to="." method="_on_back_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer2/back" to="." method="_on_back_mouse_exited"]
 [connection signal="pressed" from="MarginContainer2/back" to="." method="_on_back_pressed"]

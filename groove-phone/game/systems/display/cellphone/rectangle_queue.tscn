@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bxt4tylopnufu" path="res://assets/sprite/Effect/Thumbs_up.png" id="4_8kobb"]
 [ext_resource type="Texture2D" uid="uid://d2snihkl5aq5" path="res://assets/sprite/Effect/WhiteOutlinepng.png" id="4_vgrtk"]
 [ext_resource type="Texture2D" uid="uid://ctmm1ddd1rva" path="res://assets/sprite/Effect/red_outline.png" id="6_xk10q"]
+[ext_resource type="Texture2D" uid="uid://byy0p42iegy41" path="res://assets/sprite/Buttons/Barre_Send.png" id="7_dvju4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8kobb"]
 font = ExtResource("3_euwb3")
@@ -69,3 +70,10 @@ texture = ExtResource("4_8kobb")
 vframes = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1563516402]
+
+[node name="Send" type="Sprite2D" parent="." unique_id=324108062]
+visible = false
+texture_filter = 1
+position = Vector2(1.0000005, -1)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("7_dvju4")

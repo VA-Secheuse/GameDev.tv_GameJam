@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://sacrfxmfgbph" path="res://assets/sprite/Effect/notif_bubble.png" id="2_qrpec"]
 [ext_resource type="Texture2D" uid="uid://bq6idy3q0hr88" path="res://assets/sprite/Cellphone_full_art_sideway_with_space.png" id="3_1llvt"]
 [ext_resource type="Texture2D" uid="uid://dl284l232e531" path="res://assets/sprite/Effect/notif_dot.png" id="5_mkj65"]
+[ext_resource type="Texture2D" uid="uid://cje0gnekugw46" path="res://assets/sprite/Buttons/Fleche_back.png" id="6_pjsho"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qrpec"]
 shader = ExtResource("2_1llvt")
@@ -13,6 +14,20 @@ shader_parameter/outline_color = Color(1, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xoeb"]
 size = Vector2(264, 111)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cpkh7"]
+shader = ExtResource("2_1llvt")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(0.53306544, 0.7936908, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tob8"]
+texture = ExtResource("6_pjsho")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2iqdn"]
+texture = ExtResource("6_pjsho")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rfimm"]
+texture = ExtResource("6_pjsho")
 
 [node name="StartLevelPhone" type="Node2D" unique_id=946369039 node_paths=PackedStringArray("notif_bubble", "notif_logo", "left_corner")]
 script = ExtResource("1_2xoeb")
@@ -50,5 +65,22 @@ texture_filter = 1
 position = Vector2(75, -33)
 texture = ExtResource("5_mkj65")
 
+[node name="back" type="Button" parent="." unique_id=821363509]
+texture_filter = 1
+material = SubResource("ShaderMaterial_cpkh7")
+custom_minimum_size = Vector2(40, 30)
+offset_left = -108.0
+offset_top = 33.0
+offset_right = -68.0
+offset_bottom = 63.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_2tob8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2iqdn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rfimm")
+
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="back" to="." method="_on_back_mouse_entered"]
+[connection signal="mouse_exited" from="back" to="." method="_on_back_mouse_exited"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
