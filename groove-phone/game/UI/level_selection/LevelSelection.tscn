@@ -1,28 +1,69 @@
 [gd_scene format=3 uid="uid://bstyyeojum6ik"]
 
-[ext_resource type="Texture2D" uid="uid://dyns8jaw0gnq1" path="res://assets/sprite/Cellphone_full_art.png" id="1_vhirw"]
+[ext_resource type="Texture2D" uid="uid://cnp6f8mhsnus3" path="res://assets/Cellphone_full_art_sideway.png" id="1_vhirw"]
+[ext_resource type="Script" uid="uid://bhexbfnsv3u3g" path="res://game/UI/level_selection/level_selection.gd" id="2_joefn"]
 
-[node name="TextureRect" type="NinePatchRect" unique_id=471801575]
+[node name="ActSelectionMenu" type="TextureRect" unique_id=1748351499 node_paths=PackedStringArray("left_corner")]
 texture_filter = 1
-offset_left = 2.0
-offset_top = 488.0
-offset_right = 245.0
-offset_bottom = 1039.5
-rotation = -1.5707964
-scale = Vector2(2, 2)
+offset_right = 375.0
+offset_bottom = 259.0
+scale = Vector2(1.8, 1.8)
 texture = ExtResource("1_vhirw")
-region_rect = Rect2(0, 0, 260, 375)
-patch_margin_left = 200
-patch_margin_top = 30
-patch_margin_right = 30
-patch_margin_bottom = 30
+script = ExtResource("2_joefn")
+left_corner = NodePath("LeftCorner")
 
-[node name="Control" type="Control" parent="." unique_id=916581248]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1018926187]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -112.0
+offset_right = 106.0
+offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1474905723]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Act1" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1001755065]
+texture_filter = 1
+layout_mode = 2
+text = "Act1"
+
+[node name="Act2" type="Button" parent="MarginContainer/HBoxContainer" unique_id=718650171]
+layout_mode = 2
+text = "Act2"
+
+[node name="Act3" type="Button" parent="MarginContainer/HBoxContainer" unique_id=991430571]
+layout_mode = 2
+text = "Act3"
+
+[node name="LeftCorner" type="Marker2D" parent="." unique_id=1733853110]
+position = Vector2(0, 258.88892)
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=610341700]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 34
+theme_override_constants/margin_top = 18
+
+[node name="back" type="Button" parent="MarginContainer2" unique_id=322730247]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Act1" to="." method="_on_act_1_pressed"]
+[connection signal="button_down" from="MarginContainer/HBoxContainer/Act2" to="." method="_on_act_2_button_down"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Act3" to="." method="_on_act_3_pressed"]
+[connection signal="pressed" from="MarginContainer2/back" to="." method="_on_back_pressed"]

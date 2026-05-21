@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c6hae42garf36"]
+
+[ext_resource type="Script" uid="uid://cwl8t8b5tn7h5" path="res://game/UI/start_level/start_level_phone.gd" id="1_2xoeb"]
+[ext_resource type="Shader" uid="uid://dxjelj6hl35p" path="res://game/UI/start_level/StartLevelPhone.gdshader" id="2_1llvt"]
+[ext_resource type="Texture2D" uid="uid://sacrfxmfgbph" path="res://assets/sprite/Effect/notif_bubble.png" id="2_qrpec"]
+[ext_resource type="Texture2D" uid="uid://bq6idy3q0hr88" path="res://assets/sprite/Cellphone_full_art_sideway_with_space.png" id="3_1llvt"]
+[ext_resource type="Texture2D" uid="uid://dl284l232e531" path="res://assets/sprite/Effect/notif_dot.png" id="5_mkj65"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qrpec"]
+shader = ExtResource("2_1llvt")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xoeb"]
+size = Vector2(264, 111)
+
+[node name="StartLevelPhone" type="Node2D" unique_id=946369039 node_paths=PackedStringArray("notif_bubble", "notif_logo", "left_corner")]
+script = ExtResource("1_2xoeb")
+notif_bubble = NodePath("NotifBubble")
+notif_logo = NodePath("NotifLogo")
+left_corner = NodePath("LeftCorner")
+
+[node name="NotifBubble" type="Sprite2D" parent="." unique_id=1074814771]
+visible = false
+texture_filter = 1
+position = Vector2(75, -30)
+texture = ExtResource("2_qrpec")
+
+[node name="PhoneSprite" type="Sprite2D" parent="." unique_id=56721262]
+texture_filter = 1
+material = SubResource("ShaderMaterial_qrpec")
+position = Vector2(0, 184)
+texture = ExtResource("3_1llvt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1126944621]
+position = Vector2(0, 55)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1657353749]
+shape = SubResource("RectangleShape2D_2xoeb")
+
+[node name="LeftCorner" type="Marker2D" parent="." unique_id=1956533620]
+position = Vector2(-130, 0)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=123534967]
+zoom = Vector2(3, 3)
+
+[node name="NotifLogo" type="Sprite2D" parent="." unique_id=1560438565]
+visible = false
+texture_filter = 1
+position = Vector2(75, -33)
+texture = ExtResource("5_mkj65")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

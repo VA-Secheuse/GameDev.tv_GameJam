@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b6em2noq37m0s" path="res://game/systems/rhythm_manager/rhythm_manager.gd" id="1_1h8rv"]
 
-[node name="RhythmManager" type="Node2D" unique_id=849755052]
+[node name="RhythmManager" type="Node2D" unique_id=849755052 node_paths=PackedStringArray("left_corner")]
 script = ExtResource("1_1h8rv")
+left_corner = NodePath("LeftCorner")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=576925891]
-position = Vector2(2, 0)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=776648072]
+
+[node name="LeftCorner" type="Marker2D" parent="." unique_id=1996854806]
+position = Vector2(-325, -345)

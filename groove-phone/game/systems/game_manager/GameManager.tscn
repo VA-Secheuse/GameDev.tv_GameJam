@@ -6,37 +6,56 @@
 [ext_resource type="PackedScene" uid="uid://b8r5chlb3ho6f" path="res://game/UI/main_menu/MainMenu.tscn" id="4_6ycib"]
 [ext_resource type="PackedScene" uid="uid://cngakcsnclqxq" path="res://game/UI/settings/settings.tscn" id="5_a30ar"]
 [ext_resource type="PackedScene" uid="uid://bstyyeojum6ik" path="res://game/UI/level_selection/LevelSelection.tscn" id="6_6ja7u"]
+[ext_resource type="PackedScene" uid="uid://c6hae42garf36" path="res://game/UI/start_level/StartLevelPhone.tscn" id="7_wl6w1"]
 
-[node name="GameManager" type="Node2D" unique_id=1885611691]
+[node name="GameManager" type="Node2D" unique_id=1885611691 node_paths=PackedStringArray("act_selection", "start_level_phone")]
 script = ExtResource("1_s0p2p")
-
-[node name="RhythmManager" parent="." unique_id=775714445 instance=ExtResource("2_0gcvh")]
+act_selection = NodePath("UI/ActSelectionMenu")
+start_level_phone = NodePath("StartLevelPhone")
 
 [node name="BackGround" type="Sprite2D" parent="." unique_id=732375146]
 texture_filter = 1
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_0bm1t")
 
+[node name="RhythmManager" parent="." unique_id=775714445 instance=ExtResource("2_0gcvh")]
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=906647384]
 
-[node name="MainMenu" parent="." unique_id=581755862 instance=ExtResource("4_6ycib")]
-offset_left = 47.0
-offset_top = -328.0
-offset_right = 647.0
-offset_bottom = 392.0
+[node name="UI" type="Control" parent="." unique_id=693725333]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Settings" parent="." unique_id=267474640 instance=ExtResource("5_a30ar")]
+[node name="MainMenu" parent="UI" unique_id=581755862 instance=ExtResource("4_6ycib")]
+layout_mode = 1
+offset_left = -240.0
+offset_top = -332.0
+offset_right = 360.0
+offset_bottom = 388.0
+rotation = 0.0016185758
+
+[node name="Settings" parent="UI" unique_id=267474640 instance=ExtResource("5_a30ar")]
 visible = false
+layout_mode = 1
 offset_left = -640.0
 offset_top = -361.0
 offset_right = 640.0
 offset_bottom = 360.0
 
-[node name="TextureRect" parent="." unique_id=471801575 instance=ExtResource("6_6ja7u")]
+[node name="ActSelectionMenu" parent="UI" unique_id=1748351499 instance=ExtResource("6_6ja7u")]
 visible = false
-offset_left = -558.0
-offset_top = 252.0
-offset_right = -315.0
-offset_bottom = 803.5
+layout_mode = 0
+offset_left = -338.0
+offset_top = -232.0
+offset_right = 37.0
+offset_bottom = 27.0
 
-[connection signal="exit_pressed" from="MainMenu" to="." method="_on_main_menu_exit_pressed"]
+[node name="StartLevelPhone" parent="." unique_id=946369039 instance=ExtResource("7_wl6w1")]
+visible = false
+position = Vector2(-10, 180)
+scale = Vector2(1.8, 1.8)
+
+[connection signal="exit_pressed" from="UI/MainMenu" to="." method="_on_main_menu_exit_pressed"]
+[connection signal="start_first_act" from="StartLevelPhone" to="." method="start_first_act"]

@@ -1,5 +1,7 @@
 class_name RhythmManager extends Node2D
 
+@export var left_corner : Marker2D
+
 var current_track : Track
 
 var player_input_reader : PlayerInputReader
@@ -22,12 +24,6 @@ signal show_next_cue(interval : float, beat_info : Array)
 func _init() -> void:
 	self._create_and_associate_components()
 
-func _ready() -> void:
-	change_music(load("res://game/Ressources/Track/act_3_track/act_3_track.tres"))
-
-func _process(delta: float) -> void:
-	if(Input.is_action_just_pressed('Enter')):
-		self.start_level()
 
 func _create_and_associate_components() -> void :
 	var tmp_scene : PackedScene
