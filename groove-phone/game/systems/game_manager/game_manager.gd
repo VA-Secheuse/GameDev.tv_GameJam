@@ -73,9 +73,44 @@ func prep_first_act() -> void:
 	start_level_phone.open()
 	Global.sound_manager.stop_main_menu_music()
 	timer.start()
-	
+
+func prep_second_act() -> void:
+	var timer : Timer = Timer.new()
+	timer.one_shot = true
+	timer.autostart = false
+	timer.wait_time = 1.5
+	timer.timeout.connect(start_level_phone.second_act_start_animation)
+	timer.timeout.connect(timer.queue_free)
+	add_child(timer)
+	start_level_phone.open()
+	Global.sound_manager.stop_main_menu_music()
+	timer.start()
+
+func prep_third_act() -> void:
+	var timer : Timer = Timer.new()
+	timer.one_shot = true
+	timer.autostart = false
+	timer.wait_time = 1.5
+	timer.timeout.connect(start_level_phone.third_act_start_animation)
+	timer.timeout.connect(timer.queue_free)
+	add_child(timer)
+	start_level_phone.open()
+	Global.sound_manager.stop_main_menu_music()
+	timer.start()
 
 func start_first_act() -> void:
+	await $RhythmManager.load_level(load("res://game/Ressources/Track/act_2_track/act3_act.tres"))
+	await start_level_phone.scale_to($RhythmManager.left_corner.global_position,Vector2(2.5,2.5),0.5)
+	$RhythmManager.visible = true
+	$RhythmManager.start_level()
+
+func start_second_act() -> void:
+	await $RhythmManager.load_level(load("res://game/Ressources/Track/act_2_track/act3_act.tres"))
+	await start_level_phone.scale_to($RhythmManager.left_corner.global_position,Vector2(2.5,2.5),0.5)
+	$RhythmManager.visible = true
+	$RhythmManager.start_level()
+
+func start_third_act() -> void:
 	await $RhythmManager.load_level(load("res://game/Ressources/Track/act_2_track/act3_act.tres"))
 	await start_level_phone.scale_to($RhythmManager.left_corner.global_position,Vector2(2.5,2.5),0.5)
 	$RhythmManager.visible = true

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Track" format=3 uid="uid://bv4ew841d0pwo"]
+
+[ext_resource type="Script" uid="uid://b7rr1hmt81koj" path="res://game/Ressources/track.gd" id="1_wnwkn"]
+
+[resource]
+script = ExtResource("1_wnwkn")
+act = "act1"
+metadata/_custom_type_script = "uid://b7rr1hmt81koj"

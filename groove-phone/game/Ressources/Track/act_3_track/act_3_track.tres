@@ -1,16 +1,7 @@
 [gd_resource type="Resource" script_class="Track" format=3 uid="uid://c5hxaicjgihl"]
 
 [ext_resource type="Script" uid="uid://b7rr1hmt81koj" path="res://game/Ressources/track.gd" id="1_341i1"]
-[ext_resource type="AudioStream" uid="uid://bfve4e38st47b" path="res://assets/music/act_3_track.mp3" id="1_pb66h"]
-[ext_resource type="JSON" path="res://game/Ressources/Track/chart.json" id="1_qhv4u"]
-[ext_resource type="JSON" path="res://game/Ressources/Track/dialogue.json" id="2_pb66h"]
 
 [resource]
 script = ExtResource("1_341i1")
-act = "act_1"
-audio_stream = ExtResource("1_pb66h")
-bmp = 392
-margin = 200.0
-button_mapping = ExtResource("1_qhv4u")
-dialogue_file = ExtResource("2_pb66h")
 metadata/_custom_type_script = "uid://b7rr1hmt81koj"

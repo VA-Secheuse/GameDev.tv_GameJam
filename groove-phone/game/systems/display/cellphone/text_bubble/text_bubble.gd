@@ -12,6 +12,13 @@ static func create_text_bubble(node : Node) -> TextBubble:
 	return text_bubble
 
 func set_text(new_text : String, side : bool):
+	
+	##THIS IS FOR SHOWING DATE ITS UGLY
+	if new_text[0] == '2' && !side:
+		var dat_str = new_text.substr(1)
+		self.set_flip(true)
+		$NinetTileRec.visible = false
+	
 	if new_text == _current_text:
 		return
 	_current_text = new_text
@@ -23,7 +30,9 @@ func set_text(new_text : String, side : bool):
 	offset_bottom = 0
 	offset_top = -size.y
 	modulate.a = 1.0
-	if !side :
+	
+	##new_text[0] != '2', that is for showing the date too
+	if !side && new_text[0] != '2':
 		self.set_flip(true)
 		$NinetTileRec.visible = false
 		$Recipient.visible = true

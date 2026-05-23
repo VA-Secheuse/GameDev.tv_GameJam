@@ -1,88 +1,88 @@
 [
-    {
-        "speaker": "P",
-        "dialogue": [
-            {
-                "is_end": "no",
-                "sentence": [
+	{
+		"speaker": "P",
+		"dialogue": [
+			{
+				"is_end": "no",
+				"sentence": [
                     "Hello"
-                ]
-            },
-            {
-                "is_end": "no",
-                "sentence": [
-                    "I",
-                    "just",
-                    "want",
-                    "to",
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"I",
+					"just",
+					"want",
+					"to",
                     "say"
-                ]
-            },
-            {
-                "is_end": "yes",
-                "sentence": [
-                    "that",
-                    "I'm",
-                    "sorry",
-                    "for",
-                    "what",
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"that",
+					"I'm",
+					"sorry",
+					"for",
+					"what",
                     "happened"
-                ]
-            },
-            {
-                "is_end": "yes",
-                "sentence": [
-                    "No",
-                    "needs",
-                    "in",
-                    "making",
-                    "me",
-                    "feel",
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"No",
+					"needs",
+					"in",
+					"making",
+					"me",
+					"feel",
                     "bad..."
-                ]
-            },
-            {
-                "is_end": "no",
-                "sentence": [
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
                     "Huh?!?"
-                ]
-            },
-            {
-                "is_end": "yes",
-                "sentence": [
-                    "What",
-                    "do",
-                    "you",
-                    "mean",
-                    "\"Thanking",
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"What",
+					"do",
+					"you",
+					"mean",
+					"\"Thanking",
                     "me\""
-                ]
-            }
-        ]
-    },
-    {
-        "speaker": "R",
-        "dialogue": [
-            {
-                "is_end": "no",
-                "sentence": "If isnt the one that almost killed me!"
-            },
-            {
-                "is_end": "no",
-                "sentence": "You know I was in the nurse's office"
-            },
-            {
-                "is_end": "yes",
-                "sentence": "ALL AFTERNOON!"
-            },
-            {
-                "is_end": "no",
-                "sentence": "It never killed anyone hahaha"
-            },
-            {
-                "is_end": "yes",
-                "sentence": "Anyways I should be thanking you!"
-            }
-        ]
-    }
+				]
+			}
+		]
+	},
+	{
+		"speaker": "R",
+		"dialogue": [
+			{
+				"is_end": "no",
+				"sentence": "If isnt the one that almost killed me!"
+			},
+			{
+				"is_end": "no",
+				"sentence": "You know I was in the nurse's office"
+			},
+			{
+				"is_end": "yes",
+				"sentence": "ALL AFTERNOON!"
+			},
+			{
+				"is_end": "no",
+				"sentence": "It never killed anyone hahaha"
+			},
+			{
+				"is_end": "yes",
+				"sentence": "Anyways I should be thanking you!"
+			}
+		]
+	}
 ]
