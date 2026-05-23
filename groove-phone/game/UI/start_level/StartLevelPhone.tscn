@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bq6idy3q0hr88" path="res://assets/sprite/Cellphone_full_art_sideway_with_space.png" id="3_1llvt"]
 [ext_resource type="Texture2D" uid="uid://dl284l232e531" path="res://assets/sprite/Effect/notif_dot.png" id="5_mkj65"]
 [ext_resource type="Texture2D" uid="uid://cje0gnekugw46" path="res://assets/sprite/Buttons/Fleche_back.png" id="6_pjsho"]
+[ext_resource type="Script" uid="uid://bcxqhw05w4c0" path="res://game/UI/buttons/phone_buttons.gd" id="7_cpkh7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qrpec"]
 shader = ExtResource("2_1llvt")
@@ -65,7 +66,7 @@ texture_filter = 1
 position = Vector2(75, -33)
 texture = ExtResource("5_mkj65")
 
-[node name="back" type="Button" parent="." unique_id=821363509]
+[node name="back" type="Button" parent="." unique_id=1892293452]
 texture_filter = 1
 material = SubResource("ShaderMaterial_cpkh7")
 custom_minimum_size = Vector2(40, 30)
@@ -78,6 +79,9 @@ size_flags_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_2tob8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2iqdn")
 theme_override_styles/hover = SubResource("StyleBoxTexture_rfimm")
+script = ExtResource("7_cpkh7")
+type = 1
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -4,6 +4,7 @@ class_name PauseMenu
 
 func open_pause_menu():
 	self.visible = true
+	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.UI_OPEN_PAUSEMENU)
 	Global.current_rhythm_manager.process_mode = Node.PROCESS_MODE_DISABLED
 	
 

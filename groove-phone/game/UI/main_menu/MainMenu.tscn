@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dhvg2lllaxvk8" path="res://game/UI/main_menu/main_menu.gd" id="1_rmjxk"]
 [ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="2_8ovyh"]
 [ext_resource type="Texture2D" uid="uid://dyns8jaw0gnq1" path="res://assets/sprite/Cellphone_full_art.png" id="3_ku3nx"]
+[ext_resource type="Script" uid="uid://bcxqhw05w4c0" path="res://game/UI/buttons/phone_buttons.gd" id="4_ku3nx"]
 
 [node name="MainMenu" type="MarginContainer" unique_id=581755862 node_paths=PackedStringArray("left_corner")]
 anchors_preset = 13
@@ -55,30 +56,38 @@ theme_override_constants/margin_bottom = 0
 layout_mode = 2
 theme_override_constants/separation = 49
 
-[node name="Play" type="Button" parent="Panel/MenuButton/VBoxContainer" unique_id=1599093636]
+[node name="Play" type="Button" parent="Panel/MenuButton/VBoxContainer" unique_id=30100528]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_8ovyh")
 theme_override_font_sizes/font_size = 45
 text = "Play"
+script = ExtResource("4_ku3nx")
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
-[node name="HowToPlay" type="Button" parent="Panel/MenuButton/VBoxContainer" unique_id=925127191]
+[node name="HowToPlay" type="Button" parent="Panel/MenuButton/VBoxContainer" unique_id=607390996]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_8ovyh")
 theme_override_font_sizes/font_size = 45
 text = "How To Play"
+script = ExtResource("4_ku3nx")
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
-[node name="Settings" type="Button" parent="Panel/MenuButton/VBoxContainer" unique_id=926839115]
+[node name="Settings" type="Button" parent="Panel/MenuButton/VBoxContainer" unique_id=1667405423]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_8ovyh")
 theme_override_font_sizes/font_size = 45
 text = "Settings"
+script = ExtResource("4_ku3nx")
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
-[node name="Exit" type="Button" parent="Panel/MenuButton/VBoxContainer" unique_id=1446864170]
+[node name="Exit" type="Button" parent="Panel/MenuButton/VBoxContainer" unique_id=1171250500]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_8ovyh")
 theme_override_font_sizes/font_size = 45
 text = "Exit"
+script = ExtResource("4_ku3nx")
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
 [node name="LeftCorner" type="Marker2D" parent="." unique_id=371268919]
 position = Vector2(379, 2)

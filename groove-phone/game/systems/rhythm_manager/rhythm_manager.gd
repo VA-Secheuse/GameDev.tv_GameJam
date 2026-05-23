@@ -134,8 +134,6 @@ func _calculate_score(timing : String):
 	combo += 1
 	if combo %10 == 0:
 		Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.UI_COMBO_UP_BIG)
-	else :
-		Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.UI_COMBO_UP_SMALL)
 	match timing :
 		'ok':
 			if Global.unlosable :
@@ -161,7 +159,6 @@ func _on_failure(beat : int,timing : String):
 		lose_life()
 		cellphone.top_bar.lose_bar()
 	combo = 0
-	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.UI_COMBO_DOWN)
 	cellphone.update_combo(combo)
 
 func get_time_position_ms() -> float :

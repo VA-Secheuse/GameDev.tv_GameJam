@@ -9,7 +9,7 @@
 script = ExtResource("1_4qwu2")
 act = "act_1"
 audio_stream = ExtResource("1_jove1")
-bmp = 264
+bmp = 280
 margin = 400.0
 button_mapping = ExtResource("2_ynp28")
 dialogue_file = ExtResource("3_fy24k")

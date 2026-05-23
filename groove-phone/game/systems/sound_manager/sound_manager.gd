@@ -25,7 +25,6 @@ func create_audio(type: SoundEffect.SOUND_EFFECT_TYPE) -> void:
 		new_audio.stream = sound_effect.sound_effect
 		new_audio.volume_db = sound_effect.volume
 		new_audio.finished.connect(new_audio.queue_free)
-		print("playing: ", sound_effect.sound_effect, " volume: ", sound_effect.volume, " bus: ", new_audio.bus)
 		new_audio.play()
 	else  :
 		push_error('Sound Manager Failed to find setting for type ', type)

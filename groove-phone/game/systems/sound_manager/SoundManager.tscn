@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://boqm0cvbcce6p" path="res://assets/music/main_menu.mp3" id="2_5wdt6"]
 [ext_resource type="Script" uid="uid://bwkxhfeoqr307" path="res://game/Ressources/sound_effect.gd" id="2_ui3kh"]
 [ext_resource type="AudioStream" uid="uid://hmt8cup7fnee" path="res://assets/sound_effect/Phone Menu UI SFX/UI_Select_PhoneMenu.wav" id="3_2m7e8"]
+[ext_resource type="Resource" uid="uid://dlbhy0fm5v5dy" path="res://game/Ressources/sound_effect/button_pressed.tres" id="5_4fyt0"]
 [ext_resource type="Resource" uid="uid://cfic5c2s0ppc0" path="res://game/Ressources/sound_effect/notification.tres" id="6_78n4s"]
 [ext_resource type="Resource" uid="uid://beeorfqcp8qqh" path="res://game/Ressources/sound_effect/obj_phone_message_receive.tres" id="7_cpvjp"]
 [ext_resource type="Resource" uid="uid://b4lixnq7y62n1" path="res://game/Ressources/sound_effect/obj_phone_message_send.tres" id="8_rhxxy"]
@@ -22,6 +23,7 @@
 [ext_resource type="Resource" uid="uid://c1fgjpdn8yb03" path="res://game/Ressources/sound_effect/ui_mousehover_phonemenu.tres" id="21_poh5q"]
 [ext_resource type="Resource" uid="uid://b1ab3ecwgokco" path="res://game/Ressources/sound_effect/ui_open_pausemenu.tres" id="22_vxbeu"]
 [ext_resource type="Resource" uid="uid://bu0nqvf1nakcd" path="res://game/Ressources/sound_effect/ui_open_phonemenu.tres" id="23_hnbyf"]
+[ext_resource type="Resource" uid="uid://dy5apwpdvkb50" path="res://game/Ressources/sound_effect/ui_select_phonemenu.tres" id="24_4fyt0"]
 [ext_resource type="Resource" uid="uid://r6tprhd8ixdq" path="res://game/Ressources/sound_effect/ui_select_pausemenu.tres" id="24_28gqi"]
 
 [sub_resource type="Resource" id="Resource_v8fr6"]
@@ -31,7 +33,7 @@ metadata/_custom_type_script = "uid://bwkxhfeoqr307"
 
 [node name="SoundManager" type="Node2D" unique_id=222564299]
 script = ExtResource("1_0coxf")
-sound_effects = Array[ExtResource("2_ui3kh")]([SubResource("Resource_v8fr6"), ExtResource("6_78n4s"), ExtResource("7_cpvjp"), ExtResource("8_rhxxy"), ExtResource("9_y4ud7"), ExtResource("10_qfga8"), ExtResource("11_ihbqj"), ExtResource("12_lu6fv"), ExtResource("13_oh5bh"), ExtResource("14_0f0d2"), ExtResource("15_v2uvt"), ExtResource("16_igdyt"), ExtResource("17_jon8f"), ExtResource("18_gp4fd"), ExtResource("19_6f20a"), ExtResource("20_qix1f"), ExtResource("21_poh5q"), ExtResource("22_vxbeu"), ExtResource("23_hnbyf"), ExtResource("24_28gqi")])
+sound_effects = Array[ExtResource("2_ui3kh")]([SubResource("Resource_v8fr6"), ExtResource("6_78n4s"), ExtResource("7_cpvjp"), ExtResource("8_rhxxy"), ExtResource("9_y4ud7"), ExtResource("10_qfga8"), ExtResource("11_ihbqj"), ExtResource("12_lu6fv"), ExtResource("13_oh5bh"), ExtResource("14_0f0d2"), ExtResource("15_v2uvt"), ExtResource("16_igdyt"), ExtResource("17_jon8f"), ExtResource("18_gp4fd"), ExtResource("19_6f20a"), ExtResource("20_qix1f"), ExtResource("21_poh5q"), ExtResource("22_vxbeu"), ExtResource("23_hnbyf"), ExtResource("24_28gqi"), ExtResource("5_4fyt0"), ExtResource("24_4fyt0")])
 main_menu_music = ExtResource("2_5wdt6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1295237499]

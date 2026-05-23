@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="1_7ir4b"]
 [ext_resource type="Script" uid="uid://wep6hl2awtrf" path="res://game/UI/settings/settings.gd" id="1_68tq0"]
 [ext_resource type="PackedScene" uid="uid://w2g4frlewr48" path="res://game/UI/settings/volume_slider.tscn" id="2_84q56"]
+[ext_resource type="Script" uid="uid://cpx4l4foagno1" path="res://game/UI/buttons/setting_button.gd" id="4_36m26"]
 
 [node name="Settings" type="MarginContainer" unique_id=267474640]
 custom_minimum_size = Vector2(1280, 720)
@@ -111,25 +112,30 @@ theme_override_fonts/font = ExtResource("1_7ir4b")
 theme_override_font_sizes/font_size = 50
 text = "Unlosable Mode :"
 
-[node name="Button" type="Button" parent="MarginContainer/Settings/VBoxContainer/UnlosableMode" unique_id=2133673323]
+[node name="Button" type="Button" parent="MarginContainer/Settings/VBoxContainer/UnlosableMode" unique_id=923948996]
 texture_filter = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_7ir4b")
 theme_override_font_sizes/font_size = 50
 text = "NO"
+script = ExtResource("4_36m26")
+metadata/_custom_type_script = "uid://cpx4l4foagno1"
 
 [node name="BackButton" type="MarginContainer" parent="MarginContainer" unique_id=310297433]
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="Back" type="Button" parent="MarginContainer/BackButton" unique_id=553410336]
+[node name="Back" type="Button" parent="MarginContainer/BackButton" unique_id=288284775]
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("1_7ir4b")
 theme_override_font_sizes/font_size = 50
 text = "Back"
+script = ExtResource("4_36m26")
+type = 1
+metadata/_custom_type_script = "uid://cpx4l4foagno1"
 
 [connection signal="pressed" from="MarginContainer/Settings/VBoxContainer/UnlosableMode/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/BackButton/Back" to="." method="_on_back_pressed"]

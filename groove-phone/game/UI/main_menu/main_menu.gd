@@ -9,12 +9,10 @@ signal exit_pressed
 @export var left_corner : Marker2D
 
 func _on_play_pressed() -> void:
-	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
 	await flip_to(Global.act_selection.left_corner.global_position,-90.0)
 	Global.act_selection.show_menu()
 
 func _on_how_to_play_pressed() -> void:
-	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
 	how_to_play_pressed.emit()
 
 func hide_menu_buttons() -> void:
@@ -24,7 +22,6 @@ func show_menu_buttons() -> void:
 	$Panel/MenuButton.visible = true
 
 func _on_settings_pressed() -> void:
-	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
 	Global.setting.open_setting_menu()
 
 func _on_exit_pressed() -> void:

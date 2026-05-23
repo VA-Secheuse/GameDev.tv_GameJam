@@ -56,7 +56,6 @@ func show_menu_buttons():
 	$MarginContainer2.visible = true
 
 func _on_act_1_pressed() -> void:
-	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
 	await flip_to(Global.game_manager.start_level_phone.left_corner.global_position,90.0)
 	Global.game_manager.prep_first_act()
 
@@ -65,16 +64,13 @@ func _on_act_2_button_down() -> void:
 		_show_error_message()
 		_not_unlocked_animation()
 		_show_error_message()
-	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
 
 func _on_act_3_pressed() -> void:
 	if !Global.act_3_unlocked:
 		_not_unlocked_animation()
 		_show_error_message()
-	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
 
 func _on_back_pressed() -> void:
-	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
 	await flip_to(Global.main_menu.left_corner.global_position,90.0)
 	Global.main_menu.visible = true
 

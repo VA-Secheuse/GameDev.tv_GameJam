@@ -39,7 +39,7 @@ func first_act_start_animation() -> void:
 		notif_bubble.visible = true
 		notif_logo.visible = true
 		active_bubble()
-		Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.NOTIFICATION)
+		Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.OBJ_PHONE_NOTIFICATION)
 		can_lauch = true
 
 func open():
@@ -86,7 +86,6 @@ func _on_back_mouse_exited() -> void:
 
 func _on_back_pressed() -> void:
 	Global.sound_manager.play_main_menu_music()
-	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
 	reset_and_hide()
 	await flip_to(Global.act_selection.left_corner.global_position,-90.0)
 	Global.act_selection.show_menu()

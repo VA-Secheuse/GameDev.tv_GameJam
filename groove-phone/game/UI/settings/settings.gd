@@ -3,7 +3,6 @@ class_name Settings
 
 func _on_back_pressed() -> void:
 	self.visible = false
-	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)
 
 func open_setting_menu():
 	$MarginContainer/Settings/VBoxContainer/VolumeSliders/VBoxContainer/MasterVolume.update_value()
@@ -23,4 +22,3 @@ func _on_button_pressed() -> void:
 	else:
 		$MarginContainer/Settings/VBoxContainer/UnlosableMode/Button.text = 'YES'
 		Global.unlosable = true
-	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.ON_BUTTON_CLICKED)

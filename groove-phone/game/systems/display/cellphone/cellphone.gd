@@ -105,6 +105,7 @@ func show_next_letter():
 		return
 	cur_sentence += cur_word[cur_letter]
 	cur_letter +=1
+	_gen_typing_sound()
 	$Label.text = cur_sentence
 
 func finish_current_word(success : bool):
@@ -127,12 +128,14 @@ func send_player_message(success : bool):
 	cur_sentence = ''
 	old_sentence=''
 	cur_word =''
+	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.OBJ_PHONE_MESSAGE_SEND)
 
 func send_recipient_messages(sentences: Array, beat_ms: float):
 	_recipient_writing_bubble(beat_ms,sentences.size())
 	
 	for sentence in sentences:
 		await info.animation_finished
+		Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.OBJ_PHONE_MESSAGE_RECEIVE)
 		_new_recipient_speak_bubble(sentence)
 	add_space_too_discussion()
 	last_recipient_message_sent.emit()
@@ -207,3 +210,15 @@ func add_space_too_discussion() -> void:
 	var spacer = Control.new()
 	spacer.custom_minimum_size = Vector2(0, 20)
 	$MarginContainer/ScrollContainer/VBoxContainer.add_child(spacer)
+
+func _gen_typing_sound()-> void:
+	var random = randi() % 4
+	match random:
+		0:
+			Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.OBJ_PHONE_TYPING_02)
+		1:
+			Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.OBJ_PHONE_TYPING_01)
+		2:
+			Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.OBJ_PHONE_TYPING_03)
+		3:
+			Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.OBJ_PHONE_TYPING_04)

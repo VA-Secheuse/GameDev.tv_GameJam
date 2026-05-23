@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bhexbfnsv3u3g" path="res://game/UI/level_selection/level_selection.gd" id="2_joefn"]
 [ext_resource type="Shader" uid="uid://dxjelj6hl35p" path="res://game/UI/start_level/StartLevelPhone.gdshader" id="3_7p5fm"]
 [ext_resource type="Texture2D" uid="uid://cje0gnekugw46" path="res://assets/sprite/Buttons/Fleche_back.png" id="3_70x7a"]
+[ext_resource type="Script" uid="uid://bcxqhw05w4c0" path="res://game/UI/buttons/phone_buttons.gd" id="4_5i3bd"]
 [ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="5_l23jo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l23jo"]
@@ -72,18 +73,24 @@ theme_override_constants/margin_bottom = 50
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="Act1" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1001755065]
+[node name="Act1" type="Button" parent="MarginContainer/HBoxContainer" unique_id=108828487]
 texture_filter = 1
 layout_mode = 2
 text = "Act1"
+script = ExtResource("4_5i3bd")
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
-[node name="Act2" type="Button" parent="MarginContainer/HBoxContainer" unique_id=718650171]
+[node name="Act2" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1573100300]
 layout_mode = 2
 text = "Act2"
+script = ExtResource("4_5i3bd")
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
-[node name="Act3" type="Button" parent="MarginContainer/HBoxContainer" unique_id=991430571]
+[node name="Act3" type="Button" parent="MarginContainer/HBoxContainer" unique_id=124145243]
 layout_mode = 2
 text = "Act3"
+script = ExtResource("4_5i3bd")
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
 [node name="LeftCorner" type="Marker2D" parent="." unique_id=1733853110]
 position = Vector2(0, 258.88892)
@@ -95,7 +102,7 @@ offset_bottom = 40.0
 theme_override_constants/margin_left = 34
 theme_override_constants/margin_top = 18
 
-[node name="back" type="Button" parent="MarginContainer2" unique_id=322730247]
+[node name="back" type="Button" parent="MarginContainer2" unique_id=1839025286]
 texture_filter = 1
 material = SubResource("ShaderMaterial_l23jo")
 custom_minimum_size = Vector2(40, 30)
@@ -105,6 +112,9 @@ size_flags_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_7p5fm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_l23jo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5i3bd")
+script = ExtResource("4_5i3bd")
+type = 1
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
 [node name="MarginContainer3" type="MarginContainer" parent="." unique_id=554068797]
 layout_mode = 1
