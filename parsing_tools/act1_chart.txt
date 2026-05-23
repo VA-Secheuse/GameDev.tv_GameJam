@@ -1,0 +1,1 @@
+                p1  s  p2p1 p3p4 p3  s  p2 p3 p2 p1 p2 p3  s            b1 b2 b4b3 b3 b2 b1  s        r1  s  r1 r2 r3 r4 r3 r2  s  f
