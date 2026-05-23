@@ -87,6 +87,7 @@ func _create_and_associate_components() -> void :
 	text_composer.set_rhythm_manager(self)
 	text_composer.set_cellphone(cellphone)
 	judge.input_validation.connect(text_composer.input_pressed_and_checked)
+	cellphone.last_recipient_message_sent.connect(text_composer.next_player_word)
 	add_child(text_composer)
 
 ##This change the music in the music player
@@ -131,6 +132,10 @@ func _on_success(beat : int,timing : String):
 ##This calculate the score based on the timing of the input
 func _calculate_score(timing : String):
 	combo += 1
+	if combo %10 == 0:
+		Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.UI_COMBO_UP_BIG)
+	else :
+		Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.UI_COMBO_UP_SMALL)
 	match timing :
 		'ok':
 			if Global.unlosable :
@@ -151,10 +156,12 @@ func _calculate_score(timing : String):
 ##This function is called when a beat is unsuccesfull
 func _on_failure(beat : int,timing : String):
 	if !Global.unlosable:
+		Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.UI_LIFE_LOST)
 		cur_success = 0
 		lose_life()
 		cellphone.top_bar.lose_bar()
 	combo = 0
+	Global.sound_manager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.UI_COMBO_DOWN)
 	cellphone.update_combo(combo)
 
 func get_time_position_ms() -> float :

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://drodskxxq1f5n" path="res://game/systems/display/cellphone/text_bubble/text_bubble.gd" id="1_rcg6n"]
 [ext_resource type="Shader" uid="uid://bi7ep52vo3ca4" path="res://game/systems/display/cellphone/text_bubble/TextBubbleNineTileRec.gdshader" id="2_ja45h"]
 [ext_resource type="LabelSettings" uid="uid://cs1svpb58fd0a" path="res://game/Ressources/text_style/normal_texting.tres" id="3_43s5s"]
+[ext_resource type="Texture2D" uid="uid://ctpasigpxb28m" path="res://assets/sprite/text_bubble/recipient_text_bubble.png" id="4_04enc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_04enc"]
 shader = ExtResource("2_ja45h")
@@ -30,8 +31,17 @@ patch_margin_top = 6
 patch_margin_right = 10
 patch_margin_bottom = 9
 
-[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=876273615]
+[node name="Recipient" type="NinePatchRect" parent="." unique_id=49318834]
+visible = false
+texture_filter = 1
+material = SubResource("ShaderMaterial_04enc")
 layout_mode = 2
+texture = ExtResource("4_04enc")
+region_rect = Rect2(12, 34, 21, 21)
+patch_margin_left = 10
+patch_margin_top = 6
+patch_margin_right = 5
+patch_margin_bottom = 9
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=287928637]
 layout_mode = 2

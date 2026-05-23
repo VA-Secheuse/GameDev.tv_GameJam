@@ -32,6 +32,7 @@ func _process(delta: float) -> void:
 
 func next_player_word():
 	var next_input_info : Array = rhythm_manager.when_is_next_input()
+	
 	if next_input_info[0] == 'send' and cur_player_sentence["is_end"] == 'no':
 		cellphone.send_player_message_in(next_input_info[1])
 		change_player_sentence()
@@ -40,6 +41,7 @@ func next_player_word():
 		who_is_typing = 'recipient'
 	else :
 		var cur_word : Array = cur_player_sentence['sentence']
+		
 		if cur_word.size() <= cur_player_dialogue_word :
 			return
 		cellphone.show_next_player_word(cur_word[cur_player_dialogue_word],next_input_info[1])
@@ -54,6 +56,7 @@ func change_player_sentence() -> void:
 func next_recipient_sentences(beat_ms : float):
 	var sentences : Array
 	
+	var nb_of_sentences : int
 	##error handling
 	if recipient_sentence_array.size() <= cur_recipient_dialogue:
 		return
@@ -64,6 +67,7 @@ func next_recipient_sentences(beat_ms : float):
 			cur_recipient_dialogue += 1
 			self._recipient_last_message_sent()
 			cellphone.send_recipient_messages(sentences,beat_ms)
+			nb_of_sentences = sentences.size() + 3
 			break
 		elif recipient_sentence_array[cur_recipient_dialogue]['is_end'] == 'no':
 			sentences.append(recipient_sentence_array[cur_recipient_dialogue]['sentence'])
@@ -73,7 +77,6 @@ func next_recipient_sentences(beat_ms : float):
 
 func _recipient_last_message_sent() :
 	who_is_typing = 'player'
-	next_player_word()
 
 func input_pressed_and_checked(success : bool,button : String,beat_ms : float):
 	if button == 'send' && who_is_typing == 'recipient':
@@ -93,3 +96,7 @@ func start_sentence_in(time_ms : float, player : bool):
 	timer.timeout.connect(self.next_player_word)
 	add_child(timer)
 	timer.start()
+
+func start_next_player_sentence_in(ms: float):
+	await get_tree().create_timer(ms/1000).timeout
+	next_player_word()

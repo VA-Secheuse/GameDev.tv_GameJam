@@ -20,6 +20,8 @@ var timer : Timer
 
 @export var top_bar : TopBar
 
+signal last_recipient_message_sent()
+
 func _ready() -> void:
 	text_bubble_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	text_bubble_container.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -128,10 +130,13 @@ func send_player_message(success : bool):
 
 func send_recipient_messages(sentences: Array, beat_ms: float):
 	_recipient_writing_bubble(beat_ms,sentences.size())
-
+	
 	for sentence in sentences:
 		await info.animation_finished
 		_new_recipient_speak_bubble(sentence)
+	add_space_too_discussion()
+	last_recipient_message_sent.emit()
+	
 
 func _on_success(beat : int,timing : String):
 	var rec = _pop_rectangle_for_beat(beat)
@@ -161,7 +166,7 @@ func _new_recipient_speak_bubble(text : String) :
 	var new_bubble = TextBubble.create_text_bubble(text_bubble_container)
 	new_bubble.set_text(text, false)
 	text_bubble_container.move_child(info, -1)
-	await new_bubble.ready_to_position
+	await new_bubble.ready_to_position	
 	await get_tree().process_frame
 	scroll.scroll_vertical = scroll.get_v_scroll_bar().max_value
 
@@ -200,5 +205,5 @@ func clear_cues() ->void:
 
 func add_space_too_discussion() -> void:
 	var spacer = Control.new()
-	spacer.custom_minimum_size = Vector2(0, 50)
+	spacer.custom_minimum_size = Vector2(0, 20)
 	$MarginContainer/ScrollContainer/VBoxContainer.add_child(spacer)

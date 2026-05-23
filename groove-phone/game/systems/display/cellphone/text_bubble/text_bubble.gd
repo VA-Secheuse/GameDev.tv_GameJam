@@ -25,6 +25,8 @@ func set_text(new_text : String, side : bool):
 	modulate.a = 1.0
 	if !side :
 		self.set_flip(true)
+		$NinetTileRec.visible = false
+		$Recipient.visible = true
 	emit_signal("ready_to_position")
 
 func set_flip(is_player: bool):

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Track" format=3 uid="uid://1x0velqgng3m"]
 
 [ext_resource type="Script" uid="uid://b7rr1hmt81koj" path="res://game/Ressources/track.gd" id="1_4qwu2"]
-[ext_resource type="AudioStream" uid="uid://ckx657wi5l8sx" path="res://assets/music/track2/JSPMDR.mp3" id="1_jove1"]
+[ext_resource type="AudioStream" uid="uid://cfgv3pkugfndk" path="res://assets/music/track1/joshmeforceafairedessonspluslongmdr.mp3" id="1_jove1"]
 [ext_resource type="JSON" path="res://game/Ressources/Track/chart.json" id="2_ynp28"]
 [ext_resource type="JSON" path="res://game/Ressources/Track/dialogue.json" id="3_fy24k"]
 
@@ -9,8 +9,9 @@
 script = ExtResource("1_4qwu2")
 act = "act_1"
 audio_stream = ExtResource("1_jove1")
-bmp = 318
+bmp = 264
 margin = 400.0
 button_mapping = ExtResource("2_ynp28")
 dialogue_file = ExtResource("3_fy24k")
+volume = -20
 metadata/_custom_type_script = "uid://b7rr1hmt81koj"
