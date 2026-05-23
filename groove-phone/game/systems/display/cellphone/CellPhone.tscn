@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cx5047ytxbvf3" path="res://game/systems/display/cellphone/loose_level_menu.gd" id="5_33lyt"]
 [ext_resource type="Texture2D" uid="uid://ceh2beydbyc6k" path="res://assets/sprite/UI/No_Wifi.png" id="5_h6r8v"]
 [ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="6_vkj42"]
+[ext_resource type="Script" uid="uid://bcxqhw05w4c0" path="res://game/UI/buttons/phone_buttons.gd" id="8_jd11i"]
 [ext_resource type="Script" uid="uid://2tdw1d2y7bg3" path="res://game/systems/display/cellphone/success_level_menu.gd" id="8_ofahe"]
 
 [node name="Cellphone" type="Node2D" unique_id=1026586180 node_paths=PackedStringArray("top_bar")]
@@ -66,6 +67,7 @@ offset_left = -296.0
 offset_top = -277.0
 offset_right = 293.0
 offset_bottom = 234.0
+theme_override_constants/margin_top = 45
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=1896607182]
 layout_mode = 2
@@ -119,7 +121,7 @@ theme_override_fonts/font = ExtResource("6_vkj42")
 theme_override_font_sizes/font_size = 50
 text = "Score : 456132"
 
-[node name="Restart" type="Button" parent="LoseLevelMenu" unique_id=449447236]
+[node name="Restart" type="Button" parent="LoseLevelMenu" unique_id=1297050236]
 texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -138,8 +140,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_vkj42")
 theme_override_font_sizes/font_size = 32
 text = "Restart ?"
+script = ExtResource("8_jd11i")
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
-[node name="MainMenu" type="Button" parent="LoseLevelMenu" unique_id=2069162909]
+[node name="MainMenu" type="Button" parent="LoseLevelMenu" unique_id=1486804375]
 texture_filter = 1
 offset_left = -205.0
 offset_top = 164.0
@@ -149,6 +153,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_vkj42")
 theme_override_font_sizes/font_size = 32
 text = "Main Menu"
+script = ExtResource("8_jd11i")
+type = 1
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
 [node name="Highest" type="Label" parent="LoseLevelMenu" unique_id=1520031796]
 texture_filter = 1
@@ -161,7 +168,7 @@ theme_override_fonts/font = ExtResource("6_vkj42")
 theme_override_font_sizes/font_size = 50
 text = "HIGHEST !!!"
 
-[node name="Hide" type="Button" parent="LoseLevelMenu" unique_id=448082061]
+[node name="Hide" type="Button" parent="LoseLevelMenu" unique_id=630577262]
 texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -180,6 +187,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_vkj42")
 theme_override_font_sizes/font_size = 32
 text = "Hide"
+script = ExtResource("8_jd11i")
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
 [node name="SuccessLevelMenu" type="Node2D" parent="." unique_id=923392042 node_paths=PackedStringArray("score", "highest")]
 visible = false
@@ -209,7 +218,7 @@ theme_override_fonts/font = ExtResource("6_vkj42")
 theme_override_font_sizes/font_size = 50
 text = "Score : 456132"
 
-[node name="Restart" type="Button" parent="SuccessLevelMenu" unique_id=70692946]
+[node name="Restart" type="Button" parent="SuccessLevelMenu" unique_id=215941144]
 texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -228,8 +237,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_vkj42")
 theme_override_font_sizes/font_size = 32
 text = "Restart ?"
+script = ExtResource("8_jd11i")
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
-[node name="MainMenu" type="Button" parent="SuccessLevelMenu" unique_id=2010520938]
+[node name="MainMenu" type="Button" parent="SuccessLevelMenu" unique_id=1487324920]
 texture_filter = 1
 offset_left = -204.0
 offset_top = 160.0
@@ -239,6 +250,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_vkj42")
 theme_override_font_sizes/font_size = 32
 text = "Main Menu"
+script = ExtResource("8_jd11i")
+type = 1
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
 [node name="Highest" type="Label" parent="SuccessLevelMenu" unique_id=616199652]
 texture_filter = 1
@@ -251,7 +265,7 @@ theme_override_fonts/font = ExtResource("6_vkj42")
 theme_override_font_sizes/font_size = 50
 text = "HIGHEST !!!"
 
-[node name="Hide" type="Button" parent="SuccessLevelMenu" unique_id=1301970277]
+[node name="Hide" type="Button" parent="SuccessLevelMenu" unique_id=1916978797]
 texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -270,6 +284,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_vkj42")
 theme_override_font_sizes/font_size = 32
 text = "Hide"
+script = ExtResource("8_jd11i")
+metadata/_custom_type_script = "uid://bcxqhw05w4c0"
 
 [connection signal="pressed" from="LoseLevelMenu/Restart" to="LoseLevelMenu" method="_on_restart_pressed"]
 [connection signal="pressed" from="LoseLevelMenu/MainMenu" to="LoseLevelMenu" method="_on_main_menu_pressed"]
