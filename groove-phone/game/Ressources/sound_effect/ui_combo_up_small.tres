@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://bxioxybbdhm17"]
+
+[ext_resource type="Script" uid="uid://bwkxhfeoqr307" path="res://game/Ressources/sound_effect.gd" id="1_ljq2h"]
+[ext_resource type="AudioStream" uid="uid://xwukg163v6ed" path="res://assets/sound_effect/Combo System SFX/UI_combo_up_small.wav" id="2_cyud6"]
+
+[resource]
+script = ExtResource("1_ljq2h")
+type = 6
+sound_effect = ExtResource("2_cyud6")
+metadata/_custom_type_script = "uid://bwkxhfeoqr307"

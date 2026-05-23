@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://ce25rnud1rqxo"]
+
+[ext_resource type="Script" uid="uid://bwkxhfeoqr307" path="res://game/Ressources/sound_effect.gd" id="1_00ykk"]
+[ext_resource type="AudioStream" uid="uid://i005faaquorb" path="res://assets/sound_effect/Phone SFX/OBJ_phone_typing_02.wav" id="2_fbc00"]
+
+[resource]
+script = ExtResource("1_00ykk")
+type = 19
+sound_effect = ExtResource("2_fbc00")
+metadata/_custom_type_script = "uid://bwkxhfeoqr307"

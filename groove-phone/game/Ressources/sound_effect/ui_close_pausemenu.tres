@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://qhbojgd6f0qy"]
+
+[ext_resource type="Script" uid="uid://bwkxhfeoqr307" path="res://game/Ressources/sound_effect.gd" id="1_vewnx"]
+[ext_resource type="AudioStream" uid="uid://d03paexcoxnoo" path="res://assets/sound_effect/Pause Menu UI SFX/UI_Close_PauseMenu.wav" id="2_o6i3h"]
+
+[resource]
+script = ExtResource("1_vewnx")
+type = 8
+sound_effect = ExtResource("2_o6i3h")
+metadata/_custom_type_script = "uid://bwkxhfeoqr307"
