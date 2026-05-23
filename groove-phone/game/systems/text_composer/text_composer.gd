@@ -23,6 +23,7 @@ func start_text_composer(track : Track):
 
 func set_rhythm_manager(rhythm_manager):
 	self.rhythm_manager = rhythm_manager
+
 func set_cellphone(cellphone : CellPhone):
 	self.cellphone = cellphone
 
@@ -56,6 +57,7 @@ func next_recipient_sentences(beat_ms : float):
 	##error handling
 	if recipient_sentence_array.size() <= cur_recipient_dialogue:
 		return
+	cellphone.add_space_too_discussion()
 	while true :
 		if recipient_sentence_array[cur_recipient_dialogue]['is_end'] == 'yes' :
 			sentences.append(recipient_sentence_array[cur_recipient_dialogue]['sentence'])

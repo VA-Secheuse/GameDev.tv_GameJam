@@ -20,3 +20,10 @@ var score_dic : Dictionary = {'act_1' : 0,'act_2' : 0, 'act_3' : 0}
 ##Unlocks
 var act_2_unlocked : bool = false
 var act_3_unlocked : bool = false
+
+##When called unlock the next act
+func UNLOCK_NEXT_ACT():
+	if !Global.act_2_unlocked:
+		Global.act_2_unlocked = true
+	elif !Global.act_3_unlocked:
+		Global.act_3_unlocked = true

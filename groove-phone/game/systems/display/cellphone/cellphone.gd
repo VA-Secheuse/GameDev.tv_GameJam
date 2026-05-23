@@ -191,6 +191,14 @@ func update_life(life : int) -> void:
 func show_lose_menu(score : int, highest : bool):
 	$LoseLevelMenu.show_lose_menu(score,highest)
 
+func show_success_menu(score : int, highest : bool):
+	$SuccessLevelMenu.show_success_menu(score,highest)
+
 func clear_cues() ->void:
 	for child in $Cue.get_children():
 		child.queue_free()
+
+func add_space_too_discussion() -> void:
+	var spacer = Control.new()
+	spacer.custom_minimum_size = Vector2(0, 50)
+	$MarginContainer/ScrollContainer/VBoxContainer.add_child(spacer)

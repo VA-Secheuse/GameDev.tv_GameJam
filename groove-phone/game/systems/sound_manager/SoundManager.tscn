@@ -2,24 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dysdk6n5w3cp8" path="res://game/systems/sound_manager/sound_manager.gd" id="1_0coxf"]
 [ext_resource type="AudioStream" uid="uid://boqm0cvbcce6p" path="res://assets/music/main_menu.mp3" id="2_5wdt6"]
-[ext_resource type="Script" uid="uid://bwkxhfeoqr307" path="res://game/Ressources/sound_effect.gd" id="2_ui3kh"]
-[ext_resource type="AudioStream" uid="uid://qyw05y175k2y" path="res://assets/sound_effect/button_clicked.mp3" id="3_ui3kh"]
-[ext_resource type="AudioStream" uid="uid://hsry32x0qiyd" path="res://assets/sound_effect/notification.mp3" id="4_s05v8"]
-
-[sub_resource type="Resource" id="Resource_id3m2"]
-script = ExtResource("2_ui3kh")
-sound_effect = ExtResource("3_ui3kh")
-metadata/_custom_type_script = "uid://bwkxhfeoqr307"
-
-[sub_resource type="Resource" id="Resource_bqaum"]
-script = ExtResource("2_ui3kh")
-type = 1
-sound_effect = ExtResource("4_s05v8")
-metadata/_custom_type_script = "uid://bwkxhfeoqr307"
 
 [node name="SoundManager" type="Node2D" unique_id=222564299]
 script = ExtResource("1_0coxf")
-sound_effects = Array[ExtResource("2_ui3kh")]([SubResource("Resource_id3m2"), SubResource("Resource_bqaum")])
 main_menu_music = ExtResource("2_5wdt6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1295237499]

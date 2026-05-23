@@ -44,6 +44,7 @@ func _create_and_associate_components() -> void :
 	tmp_scene = load(MusicPlayer.music_player_scene_path)
 	music_player = tmp_scene.instantiate()
 	music_player.set_rhythm_manager(self)
+	music_player.finished.connect(self._music_finished)
 	add_child(music_player)
 	
 	##This create and connect Metronome and its signals
@@ -108,7 +109,7 @@ func _beat_changed(message : String, beat : int,travel_time : float):
 	self.beat_changed.emit()
 	self.cur_beat = beat
 	if composer.get_associated_beat_info(cur_beat)['type'] == 'fin':
-		stop_beat_game()
+		metronome.stop_metronome()
 	var beat_info : Dictionary = composer.get_associated_beat_info(cur_beat + 8)
 	if beat_info == {}:
 		return
@@ -126,7 +127,6 @@ func _on_success(beat : int,timing : String):
 	_calculate_score(timing)
 	cellphone.top_bar.set_score(score)
 	cellphone.update_combo(combo)
-	
 
 ##This calculate the score based on the timing of the input
 func _calculate_score(timing : String):
@@ -184,7 +184,7 @@ func when_is_next_input() -> Array:
 	
 	return[beat_type,next_input_ms]
 
-##this stop the metronome
+##this stop the metronome, clear the cue and stop the track
 func stop_beat_game():
 	music_player.stop_track()
 	cellphone.clear_cues()
@@ -236,5 +236,16 @@ func lose_level():
 		highest = true
 		Global.score_dic[current_track.act] = score
 	cellphone.show_lose_menu(score,highest)
-		
-		
+
+func level_success():
+	stop_beat_game()
+	Global.UNLOCK_NEXT_ACT()
+	var act_score = Global.score_dic[current_track.act] 
+	var highest : bool = false
+	if score > act_score:
+		highest = true
+		Global.score_dic[current_track.act] = score
+	cellphone.show_success_menu(score,highest)
+
+func _music_finished():
+	level_success()

@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cx5047ytxbvf3" path="res://game/systems/display/cellphone/loose_level_menu.gd" id="5_33lyt"]
 [ext_resource type="Texture2D" uid="uid://ceh2beydbyc6k" path="res://assets/sprite/UI/No_Wifi.png" id="5_h6r8v"]
 [ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="6_vkj42"]
+[ext_resource type="Script" uid="uid://2tdw1d2y7bg3" path="res://game/systems/display/cellphone/success_level_menu.gd" id="8_ofahe"]
 
 [node name="Cellphone" type="Node2D" unique_id=1026586180 node_paths=PackedStringArray("top_bar")]
 script = ExtResource("1_33wg6")
@@ -180,6 +181,99 @@ theme_override_fonts/font = ExtResource("6_vkj42")
 theme_override_font_sizes/font_size = 32
 text = "Hide"
 
+[node name="SuccessLevelMenu" type="Node2D" parent="." unique_id=923392042 node_paths=PackedStringArray("score", "highest")]
+visible = false
+script = ExtResource("8_ofahe")
+score = NodePath("Score")
+highest = NodePath("Highest")
+
+[node name="Label" type="Label" parent="SuccessLevelMenu" unique_id=1174944998]
+texture_filter = 1
+offset_left = -87.0
+offset_top = -69.0
+offset_right = 249.0
+offset_bottom = -18.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 64
+text = "ACT DONE"
+
+[node name="Score" type="Label" parent="SuccessLevelMenu" unique_id=1344736136]
+texture_filter = 1
+offset_left = -129.0
+offset_top = 54.0
+offset_right = 284.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 50
+text = "Score : 456132"
+
+[node name="Restart" type="Button" parent="SuccessLevelMenu" unique_id=70692946]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 76.0
+offset_top = 160.0
+offset_right = 206.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 32
+text = "Restart ?"
+
+[node name="MainMenu" type="Button" parent="SuccessLevelMenu" unique_id=2010520938]
+texture_filter = 1
+offset_left = -204.0
+offset_top = 160.0
+offset_right = -74.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 32
+text = "Main Menu"
+
+[node name="Highest" type="Label" parent="SuccessLevelMenu" unique_id=616199652]
+texture_filter = 1
+offset_left = -92.0
+offset_top = 7.0
+offset_right = 321.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 50
+text = "HIGHEST !!!"
+
+[node name="Hide" type="Button" parent="SuccessLevelMenu" unique_id=1301970277]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -286.0
+offset_top = -218.0
+offset_right = -156.0
+offset_bottom = -183.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 32
+text = "Hide"
+
 [connection signal="pressed" from="LoseLevelMenu/Restart" to="LoseLevelMenu" method="_on_restart_pressed"]
 [connection signal="pressed" from="LoseLevelMenu/MainMenu" to="LoseLevelMenu" method="_on_main_menu_pressed"]
 [connection signal="pressed" from="LoseLevelMenu/Hide" to="LoseLevelMenu" method="_on_hide_pressed"]
+[connection signal="pressed" from="SuccessLevelMenu/Restart" to="SuccessLevelMenu" method="_on_restart_pressed"]
+[connection signal="pressed" from="SuccessLevelMenu/MainMenu" to="SuccessLevelMenu" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="SuccessLevelMenu/Hide" to="SuccessLevelMenu" method="_on_hide_pressed"]

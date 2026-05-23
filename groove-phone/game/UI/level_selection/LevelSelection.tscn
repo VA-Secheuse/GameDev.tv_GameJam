@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bhexbfnsv3u3g" path="res://game/UI/level_selection/level_selection.gd" id="2_joefn"]
 [ext_resource type="Shader" uid="uid://dxjelj6hl35p" path="res://game/UI/start_level/StartLevelPhone.gdshader" id="3_7p5fm"]
 [ext_resource type="Texture2D" uid="uid://cje0gnekugw46" path="res://assets/sprite/Buttons/Fleche_back.png" id="3_70x7a"]
+[ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="5_l23jo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l23jo"]
 shader = ExtResource("3_7p5fm")
@@ -27,6 +28,27 @@ scale = Vector2(1.8, 1.8)
 texture = ExtResource("1_vhirw")
 script = ExtResource("2_joefn")
 left_corner = NodePath("LeftCorner")
+
+[node name="ErrorMessage" type="MarginContainer" parent="." unique_id=1482415017]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="ErrorMessage" unique_id=871998744]
+visible = false
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_l23jo")
+theme_override_font_sizes/font_size = 20
+text = "You Haven't Unlocked This Act Yet"
+horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1018926187]
 layout_mode = 1
@@ -83,6 +105,55 @@ size_flags_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_7p5fm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_l23jo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5i3bd")
+
+[node name="MarginContainer3" type="MarginContainer" parent="." unique_id=554068797]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -40.0
+offset_right = 112.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 34
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer3" unique_id=926113909]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Act1Score" type="Label" parent="MarginContainer3/HBoxContainer" unique_id=1935756416]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 29)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0.70980394, 0.91764706, 1)
+theme_override_fonts/font = ExtResource("5_l23jo")
+theme_override_font_sizes/font_size = 16
+text = " "
+horizontal_alignment = 1
+
+[node name="Act2Score" type="Label" parent="MarginContainer3/HBoxContainer" unique_id=1743170128]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 29)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0.70980394, 0.91764706, 1)
+theme_override_fonts/font = ExtResource("5_l23jo")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="Act3Score" type="Label" parent="MarginContainer3/HBoxContainer" unique_id=239672090]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 29)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0.70980394, 0.91764706, 1)
+theme_override_fonts/font = ExtResource("5_l23jo")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Act1" to="." method="_on_act_1_pressed"]
 [connection signal="button_down" from="MarginContainer/HBoxContainer/Act2" to="." method="_on_act_2_button_down"]
