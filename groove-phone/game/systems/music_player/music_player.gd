@@ -4,7 +4,7 @@ static var music_player_scene_path = "res://game/systems/music_player/MusicPlaye
 
 var rhythm_manager : RhythmManager
 
-
+signal music_finished
 
 func _process(delta: float) -> void:
 	if self.playing :

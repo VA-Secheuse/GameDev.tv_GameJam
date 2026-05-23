@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://cfic5c2s0ppc0"]
 
 [ext_resource type="Script" uid="uid://bwkxhfeoqr307" path="res://game/Ressources/sound_effect.gd" id="1_mxbgg"]
-[ext_resource type="AudioStream" uid="uid://cor1qyp587fve" path="res://assets/sound_effect/Phone SFX/OBJ_phone_notification.wav" id="2_ksyjx"]
+[ext_resource type="AudioStream" uid="uid://hsry32x0qiyd" path="res://assets/sound_effect/notification.mp3" id="2_ksyjx"]
 
 [resource]
 script = ExtResource("1_mxbgg")

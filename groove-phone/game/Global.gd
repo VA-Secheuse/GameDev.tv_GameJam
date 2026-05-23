@@ -15,6 +15,8 @@ var current_rhythm_manager : RhythmManager
 var game_manager : GameManager
 
 ##Game score
-var act_1_score : int
-var act_2_score : int
-var act_3_score : int
+var score_dic : Dictionary = {'act_1' : 0,'act_2' : 0, 'act_3' : 0}
+
+##Unlocks
+var act_2_unlocked : bool = false
+var act_3_unlocked : bool = false

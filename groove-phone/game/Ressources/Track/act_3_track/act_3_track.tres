@@ -7,6 +7,7 @@
 
 [resource]
 script = ExtResource("1_341i1")
+act = "act_1"
 audio_stream = ExtResource("1_pb66h")
 bmp = 392
 margin = 200.0

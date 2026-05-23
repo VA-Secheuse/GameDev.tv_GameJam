@@ -1,8 +1,8 @@
 extends Node2D
 class_name TopBar
 
-@onready var full = $FullWifi
-@onready var empty = $EmptyWifi
+@onready var full = $AllBars/Bars/FullWifi
+@onready var empty = $AllBars/EmptyWifi
 
 var current_bars : int = 6
 var max_bars : int =  6

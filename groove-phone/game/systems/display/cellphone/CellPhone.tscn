@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://c727vjxdnkr2m" path="res://assets/sprite/Cellphone.png" id="2_iw8gi"]
 [ext_resource type="LabelSettings" uid="uid://cs1svpb58fd0a" path="res://game/Ressources/text_style/normal_texting.tres" id="3_a62kn"]
 [ext_resource type="PackedScene" uid="uid://jfmierf42v6o" path="res://game/systems/display/cellphone/top_bar/top_bar.tscn" id="4_6e6ux"]
+[ext_resource type="Script" uid="uid://cx5047ytxbvf3" path="res://game/systems/display/cellphone/loose_level_menu.gd" id="5_33lyt"]
+[ext_resource type="Texture2D" uid="uid://ceh2beydbyc6k" path="res://assets/sprite/UI/No_Wifi.png" id="5_h6r8v"]
+[ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="6_vkj42"]
 
 [node name="Cellphone" type="Node2D" unique_id=1026586180 node_paths=PackedStringArray("top_bar")]
 script = ExtResource("1_33wg6")
@@ -76,3 +79,107 @@ size_flags_vertical = 8
 texture_filter = 1
 position = Vector2(0, -255.00003)
 scale = Vector2(2.5, 2.5)
+
+[node name="LoseLevelMenu" type="Node2D" parent="." unique_id=2023791512 node_paths=PackedStringArray("icon", "score", "highest")]
+visible = false
+position = Vector2(-1, -50)
+script = ExtResource("5_33lyt")
+icon = NodePath("Icon")
+score = NodePath("Score")
+highest = NodePath("Highest")
+
+[node name="Icon" type="Node2D" parent="LoseLevelMenu" unique_id=41664040]
+
+[node name="NoConnection" type="Sprite2D" parent="LoseLevelMenu/Icon" unique_id=1434194216]
+texture_filter = 1
+position = Vector2(-1, -49)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("5_h6r8v")
+
+[node name="Label" type="Label" parent="LoseLevelMenu/Icon" unique_id=1752341580]
+texture_filter = 1
+offset_left = -151.0
+offset_top = -26.0
+offset_right = 185.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 64
+text = "LOST CONNEXION"
+
+[node name="Score" type="Label" parent="LoseLevelMenu" unique_id=222975742]
+texture_filter = 1
+offset_left = -121.0
+offset_top = 91.0
+offset_right = 292.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 50
+text = "Score : 456132"
+
+[node name="Restart" type="Button" parent="LoseLevelMenu" unique_id=449447236]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 75.0
+offset_top = 164.0
+offset_right = 205.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 32
+text = "Restart ?"
+
+[node name="MainMenu" type="Button" parent="LoseLevelMenu" unique_id=2069162909]
+texture_filter = 1
+offset_left = -205.0
+offset_top = 164.0
+offset_right = -75.0
+offset_bottom = 199.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 32
+text = "Main Menu"
+
+[node name="Highest" type="Label" parent="LoseLevelMenu" unique_id=1520031796]
+texture_filter = 1
+offset_left = -84.0
+offset_top = 44.0
+offset_right = 329.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 50
+text = "HIGHEST !!!"
+
+[node name="Hide" type="Button" parent="LoseLevelMenu" unique_id=448082061]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -140.0
+offset_right = -157.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkj42")
+theme_override_font_sizes/font_size = 32
+text = "Hide"
+
+[connection signal="pressed" from="LoseLevelMenu/Restart" to="LoseLevelMenu" method="_on_restart_pressed"]
+[connection signal="pressed" from="LoseLevelMenu/MainMenu" to="LoseLevelMenu" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="LoseLevelMenu/Hide" to="LoseLevelMenu" method="_on_hide_pressed"]

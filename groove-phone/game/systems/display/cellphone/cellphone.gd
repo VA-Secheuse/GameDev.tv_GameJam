@@ -187,3 +187,10 @@ func update_combo(combo : int):
 
 func update_life(life : int) -> void:
 	top_bar.set_bars(life)
+
+func show_lose_menu(score : int, highest : bool):
+	$LoseLevelMenu.show_lose_menu(score,highest)
+
+func clear_cues() ->void:
+	for child in $Cue.get_children():
+		child.queue_free()

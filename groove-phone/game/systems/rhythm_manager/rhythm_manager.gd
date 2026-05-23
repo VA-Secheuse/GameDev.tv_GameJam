@@ -23,6 +23,7 @@ var combo : int = 0
 var score : int = 0
 
 ##variable for life
+var max_life : int = 6
 var life : int = 6
 var cur_missed : int = 0
 var cur_success : int = 0
@@ -117,10 +118,11 @@ func _beat_changed(message : String, beat : int,travel_time : float):
 
 ##This function is called when a beat is succesfull
 func _on_success(beat : int,timing : String):
-	cur_success += 1
-	if cur_success % 2 == 0:
-		gain_life()
-		cellphone.top_bar.gain_bar()
+	if !Global.unlosable:
+		cur_success += 1
+		if cur_success % 2 == 0:
+			gain_life()
+			cellphone.top_bar.gain_bar()
 	_calculate_score(timing)
 	cellphone.top_bar.set_score(score)
 	cellphone.update_combo(combo)
@@ -131,17 +133,27 @@ func _calculate_score(timing : String):
 	combo += 1
 	match timing :
 		'ok':
-			score += ok * combo
+			if Global.unlosable :
+				score += (ok/2) * combo
+			else :
+				score += ok * combo
 		'good':
-			score += good * combo
+			if Global.unlosable :
+				score += (good/2) * combo
+			else :
+				score += good * combo
 		'perfect':
-			score += perfect * combo
+			if Global.unlosable :
+				score += (perfect/2) * combo
+			else :
+				score += perfect * combo
 
 ##This function is called when a beat is unsuccesfull
 func _on_failure(beat : int,timing : String):
-	cur_success = 0
-	lose_life()
-	cellphone.top_bar.lose_bar()
+	if !Global.unlosable:
+		cur_success = 0
+		lose_life()
+		cellphone.top_bar.lose_bar()
 	combo = 0
 	cellphone.update_combo(combo)
 
@@ -174,6 +186,8 @@ func when_is_next_input() -> Array:
 
 ##this stop the metronome
 func stop_beat_game():
+	music_player.stop_track()
+	cellphone.clear_cues()
 	metronome.stop_metronome()
 
 func restart_level():
@@ -183,15 +197,19 @@ func restart_level():
 
 func lose_life():
 	life -= 1
+	if life <= 0:
+		lose_level()
 
 func gain_life():
+	if life >= max_life:
+		return
 	life += 1
 
 func exit_level():
 	cur_beat = 0
 	combo = 0
 	time_position_ms = 0.0
-	life = 6
+	life = max_life
 	cur_missed = 0
 	cur_success = 0
 	self.visible = false
@@ -210,4 +228,13 @@ func exit_level():
 	cellphone.queue_free() 
 	text_composer.queue_free() 
 	
-	
+func lose_level():
+	stop_beat_game()
+	var act_score = Global.score_dic[current_track.act] 
+	var highest : bool = false
+	if score > act_score:
+		highest = true
+		Global.score_dic[current_track.act] = score
+	cellphone.show_lose_menu(score,highest)
+		
+		
