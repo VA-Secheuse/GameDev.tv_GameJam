@@ -8,7 +8,7 @@
 [resource]
 script = ExtResource("1_341i1")
 audio_stream = ExtResource("1_pb66h")
-bmp = 196
+bmp = 392
 margin = 200.0
 button_mapping = ExtResource("1_qhv4u")
 dialogue_file = ExtResource("2_pb66h")

@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://jfmierf42v6o"]
+
+[ext_resource type="Script" uid="uid://dxlmox0qhyrv" path="res://game/systems/display/cellphone/top_bar/top_bar.gd" id="1_uwom5"]
+[ext_resource type="Texture2D" uid="uid://cv1jdkwsopsy7" path="res://assets/sprite/UI/Barre_cell.png" id="2_kvskx"]
+[ext_resource type="Texture2D" uid="uid://bdhsc3dgcii8l" path="res://assets/sprite/UI/Barre_cell_vide.png" id="3_53ww6"]
+[ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="4_53ww6"]
+
+[node name="TopBar" type="Node2D" unique_id=194624758]
+script = ExtResource("1_uwom5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=974906171]
+visible = false
+
+[node name="AllBars" type="Node2D" parent="." unique_id=1839910190]
+
+[node name="EmptyWifi" type="Sprite2D" parent="AllBars" unique_id=1471726876]
+texture_filter = 1
+texture = ExtResource("3_53ww6")
+region_rect = Rect2(160, -8, 12, 0)
+
+[node name="Bars" type="Node2D" parent="AllBars" unique_id=1250495259]
+
+[node name="OneBar" type="Sprite2D" parent="AllBars/Bars" unique_id=1810916400]
+visible = false
+texture_filter = 1
+position = Vector2(80, 0)
+texture = ExtResource("2_kvskx")
+region_enabled = true
+region_rect = Rect2(185, 0, 4, 16)
+
+[node name="TwoBar" type="Sprite2D" parent="AllBars/Bars" unique_id=1228506842]
+visible = false
+texture_filter = 1
+position = Vector2(82, 0)
+texture = ExtResource("2_kvskx")
+region_enabled = true
+region_rect = Rect2(185, 0, 8, 16)
+
+[node name="ThreeBar" type="Sprite2D" parent="AllBars/Bars" unique_id=826065932]
+visible = false
+texture_filter = 1
+position = Vector2(82, 0)
+texture = ExtResource("2_kvskx")
+region_enabled = true
+region_rect = Rect2(181, 0, 16, 16)
+
+[node name="FourBar" type="Sprite2D" parent="AllBars/Bars" unique_id=390839571]
+visible = false
+texture_filter = 1
+position = Vector2(86, 0)
+texture = ExtResource("2_kvskx")
+region_enabled = true
+region_rect = Rect2(185, 0, 16, 16)
+
+[node name="FiveBar" type="Sprite2D" parent="AllBars/Bars" unique_id=1496987695]
+visible = false
+texture_filter = 1
+position = Vector2(87, 0)
+texture = ExtResource("2_kvskx")
+region_enabled = true
+region_rect = Rect2(183, 0, 22, 16)
+
+[node name="FullWifi" type="Sprite2D" parent="AllBars/Bars" unique_id=1274522018]
+texture_filter = 1
+texture = ExtResource("2_kvskx")
+region_rect = Rect2(0, 0, 189, 16)
+
+[node name="score" type="Label" parent="." unique_id=1696628247]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -7.0
+offset_right = -30.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.45083946, 0.63583934, 0.8225021, 1)
+theme_override_fonts/font = ExtResource("4_53ww6")
+text = "0"
+horizontal_alignment = 2
+
+[node name="combo" type="Label" parent="." unique_id=1232730113]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -8.0
+offset_right = 67.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.4509804, 0.63529414, 0.8235294, 1)
+theme_override_fonts/font = ExtResource("4_53ww6")

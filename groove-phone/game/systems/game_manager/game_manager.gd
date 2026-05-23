@@ -76,7 +76,7 @@ func prep_first_act() -> void:
 	
 
 func start_first_act() -> void:
-	await $RhythmManager.load_level(load("res://game/Ressources/Track/act_3_track/act_3_track.tres"))
+	await $RhythmManager.load_level(load("res://game/Ressources/Track/act_2_track/act3_act.tres"))
 	await start_level_phone.scale_to($RhythmManager.left_corner.global_position,Vector2(2.5,2.5),0.5)
 	$RhythmManager.visible = true
 	$RhythmManager.start_level()

@@ -15,10 +15,20 @@ var text_composer : TextComposer
 var time_position_ms : float
 var cur_beat : int = 0
 
-signal beat_changed()
-signal tmp_signal()
-signal tmp_2(message)
+##variable for score
+var ok : int = 50
+var good : int = 75
+var perfect : int = 100
+var combo : int = 0
+var score : int = 0
 
+##variable for life
+var life : int = 6
+var cur_missed : int = 0
+var cur_success : int = 0
+
+
+signal beat_changed()
 signal show_next_cue(interval : float, beat_info : Array)
 
 func _create_and_associate_components() -> void :
@@ -105,11 +115,35 @@ func _beat_changed(message : String, beat : int,travel_time : float):
 		return
 	show_next_cue.emit(travel_time,beat_info)
 
-func _on_success():
-	tmp_2.emit("success")
+##This function is called when a beat is succesfull
+func _on_success(beat : int,timing : String):
+	cur_success += 1
+	if cur_success % 2 == 0:
+		gain_life()
+		cellphone.top_bar.gain_bar()
+	_calculate_score(timing)
+	cellphone.top_bar.set_score(score)
+	cellphone.update_combo(combo)
+	
 
-func _on_failure():
-	tmp_2.emit("failure")
+##This calculate the score based on the timing of the input
+func _calculate_score(timing : String):
+	combo += 1
+	match timing :
+		'ok':
+			score += ok * combo
+		'good':
+			score += good * combo
+		'perfect':
+			score += perfect * combo
+
+##This function is called when a beat is unsuccesfull
+func _on_failure(beat : int,timing : String):
+	cur_success = 0
+	lose_life()
+	cellphone.top_bar.lose_bar()
+	combo = 0
+	cellphone.update_combo(combo)
 
 func get_time_position_ms() -> float :
 	return time_position_ms
@@ -147,9 +181,19 @@ func restart_level():
 	await load_level(current_track)
 	await start_level()
 
+func lose_life():
+	life -= 1
+
+func gain_life():
+	life += 1
+
 func exit_level():
 	cur_beat = 0
+	combo = 0
 	time_position_ms = 0.0
+	life = 6
+	cur_missed = 0
+	cur_success = 0
 	self.visible = false
 	if show_next_cue.is_connected(cellphone._show_next_cue):
 		show_next_cue.disconnect(cellphone._show_next_cue)

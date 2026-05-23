@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://ckkic2i45tc7p" path="res://game/systems/display/cellphone/cellphone.gd" id="1_33wg6"]
 [ext_resource type="Texture2D" uid="uid://c727vjxdnkr2m" path="res://assets/sprite/Cellphone.png" id="2_iw8gi"]
 [ext_resource type="LabelSettings" uid="uid://cs1svpb58fd0a" path="res://game/Ressources/text_style/normal_texting.tres" id="3_a62kn"]
+[ext_resource type="PackedScene" uid="uid://jfmierf42v6o" path="res://game/systems/display/cellphone/top_bar/top_bar.tscn" id="4_6e6ux"]
 
-[node name="Cellphone" type="Node2D" unique_id=1026586180]
+[node name="Cellphone" type="Node2D" unique_id=1026586180 node_paths=PackedStringArray("top_bar")]
 script = ExtResource("1_33wg6")
+top_bar = NodePath("TopBar")
 
 [node name="SpriteCellphone" type="Sprite2D" parent="." unique_id=710439333]
 texture_filter = 1
@@ -69,3 +71,8 @@ layout_mode = 2
 size_flags_vertical = 8
 
 [node name="Cue" type="Node2D" parent="." unique_id=222302288]
+
+[node name="TopBar" parent="." unique_id=194624758 instance=ExtResource("4_6e6ux")]
+texture_filter = 1
+position = Vector2(0, -255.00003)
+scale = Vector2(2.5, 2.5)

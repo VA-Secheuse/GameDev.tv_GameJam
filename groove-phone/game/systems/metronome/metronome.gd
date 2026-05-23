@@ -15,6 +15,8 @@ var enter_emitted : bool = false
 var travel_time_sec : float
 var is_metronome_active : bool = false
 
+var time_since_beat_ms: float = 0.0
+
 var rhythm_manager : RhythmManager
 
 signal beat_changed(info : String, lastBeat : int,travel_time : float)
@@ -38,6 +40,7 @@ func set_rhythm_manager(Rhythm_manager : RhythmManager):
 
 func _process(delta: float) -> void:
 	if is_metronome_active :
+		time_since_beat_ms += delta * 1000.0
 		calculate_beat()
 
 func start_metronome():
@@ -47,6 +50,7 @@ func stop_metronome():
 	is_metronome_active = false
 
  ##This is the core logic of the metronome
+
 func calculate_beat():
 		
 	var position = rhythm_manager.get_time_position_ms()
@@ -64,6 +68,7 @@ func calculate_beat():
 		active_beat_start_position = next_beat_position - margin_ms * 2
 		active_beat_end_position   = next_beat_position + margin_ms
 		enter_emitted = false
+		time_since_beat_ms = 0.0
 		beat_changed.emit("beat", current_beat, self.travel_time_sec)
 
 	# Enter Window
@@ -76,3 +81,6 @@ func calculate_beat():
 		exit_beat.emit(window_beat)
 		window_beat = -1
 		enter_emitted = false
+
+func time_since_beat() :
+	return time_since_beat

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpsyu4bg7rgab"
+path="res://.godot/imported/UI_Open_PauseMenu.wav-ae2add525f7b1fe4907a0c4d31b17fe8.sample"
+
+[deps]
+
+source_file="res://assets/sound_effect/Pause Menu UI SFX/UI_Open_PauseMenu.wav"
+dest_files=["res://.godot/imported/UI_Open_PauseMenu.wav-ae2add525f7b1fe4907a0c4d31b17fe8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
