@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b7rr1hmt81koj" path="res://game/Ressources/track.gd" id="1_4qwu2"]
 [ext_resource type="AudioStream" uid="uid://cfgv3pkugfndk" path="res://assets/music/track1/joshmeforceafairedessonspluslongmdr.mp3" id="1_jove1"]
-[ext_resource type="JSON" path="res://game/Ressources/Track/chart.json" id="2_ynp28"]
-[ext_resource type="JSON" path="res://game/Ressources/Track/dialogue.json" id="3_fy24k"]
+[ext_resource type="JSON" path="res://game/Ressources/Track/act_2_track/act1_chart.json" id="2_jove1"]
+[ext_resource type="JSON" path="res://game/Ressources/Track/act_2_track/act1_dialogue.json" id="3_jove1"]
 
 [resource]
 script = ExtResource("1_4qwu2")
@@ -11,7 +11,7 @@ act = "act_1"
 audio_stream = ExtResource("1_jove1")
 bmp = 280
 margin = 400.0
-button_mapping = ExtResource("2_ynp28")
-dialogue_file = ExtResource("3_fy24k")
+button_mapping = ExtResource("2_jove1")
+dialogue_file = ExtResource("3_jove1")
 volume = -20
 metadata/_custom_type_script = "uid://b7rr1hmt81koj"
