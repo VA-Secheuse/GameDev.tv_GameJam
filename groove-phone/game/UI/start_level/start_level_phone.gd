@@ -114,8 +114,6 @@ func flip_to(target_top_left: Vector2, target_rotation_deg: float) -> void:
 	tween.tween_property(self, "global_position", target_pos, 0.5)
 	tween.tween_property(self, "rotation_degrees", target_rotation_deg, 0.5)
 	await tween.finished
-	print('targer pos : ' ,target_top_left)
-	print('cur pos :',$LeftCorner.global_position )
 	self.global_position = cur_pos
 	self.rotation_degrees = cur_deg
 	self.visible = false

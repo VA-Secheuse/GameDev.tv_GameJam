@@ -18,6 +18,8 @@ var info
 
 var timer : Timer
 
+@export var top_bar : TopBar
+
 func _ready() -> void:
 	text_bubble_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	text_bubble_container.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -130,14 +132,13 @@ func send_recipient_messages(sentences: Array, beat_ms: float):
 	for sentence in sentences:
 		await info.animation_finished
 		_new_recipient_speak_bubble(sentence)
-		
 
-func _on_success(beat : int):
+func _on_success(beat : int,timing : String):
 	var rec = _pop_rectangle_for_beat(beat)
 	if rec and is_instance_valid(rec):
 		rec.success_animation()
 
-func _on_failure(beat : int):
+func _on_failure(beat : int,timing : String):
 	var rec = _pop_rectangle_for_beat(beat)
 	if rec and is_instance_valid(rec):
 		rec.failed_animation()
@@ -180,3 +181,9 @@ func flicker_animation():
 	var flicker_deg : float = randf_range(1.0,1.5)
 	tween.tween_property(self,'rotation_degrees',flicker_deg,0.1)
 	tween.tween_property(self,'rotation_degrees',0,0.1)
+
+func update_combo(combo : int):
+	top_bar.update_combo(combo)
+
+func update_life(life : int) -> void:
+	top_bar.set_bars(life)

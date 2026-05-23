@@ -9,8 +9,8 @@ var action_valide = false
 var rhythm_manager : RhythmManager
 var metronome : Metronome
 
-signal failure(beat : int)
-signal success(beat : int)
+signal failure(beat : int,timing : String)
+signal success(beat : int,timing : String)
 ##this is used by the text composer
 signal input_validation(success: bool,type : String,beat_time : float)
 
@@ -24,7 +24,7 @@ func _beat_exited(beat : int):
 	in_beat = false
 	var button : String = composer.get_associated_beat_button(rhythm_manager.cur_beat)
 	if !action_valide && button != "empty" :
-		failure.emit(rhythm_manager.cur_beat)
+		failure.emit(rhythm_manager.cur_beat,"missed")
 		input_validation.emit(false,button,metronome.beat_duration_ms)
 		
 
@@ -48,8 +48,16 @@ func _button_pressed(input_id : int):
 		return
 	if not in_beat :
 		return
+	var offset_ms = abs(metronome.time_since_beat_ms)  
+	var timing: String
+	if offset_ms < 50:
+		timing = "perfect"
+	elif offset_ms < 100:
+		timing = "good"
+	else:
+		timing = "ok"
 	action_valide = true
-	success.emit(rhythm_manager.cur_beat)
+	success.emit(rhythm_manager.cur_beat,timing)
 	input_validation.emit(true,button,metronome.beat_duration_ms)
 
 
