@@ -43,7 +43,8 @@ func move_to(target_pos: Vector2, duration: float):
 	move_tween.tween_property(self, "position", final_pos, total_duration)
 	move_tween.parallel().tween_property(self, "modulate:a", 0.7, duration)
 
-func success_animation():
+func success_animation(timing : String):
+	_timing_icon(timing)
 	if !is_send:
 		if move_tween: move_tween.kill() 
 		var tween = create_tween()
@@ -53,13 +54,22 @@ func success_animation():
 
 		tween.tween_property($WhiteOutline, "scale", Vector2(3.1, 3.1), 0.6)
 		tween.tween_callback(func(): $WhiteOutline.visible = false)
-		$ThumbsStartingAnimation/Thumbs.visible = true
+		$ThumbsStartingAnimation/Effect.visible = true
 		var original_pos = $ThumbsStartingAnimation.position
 		var shake_tween = create_tween()
 		shake_tween.tween_property($ThumbsStartingAnimation, "position", original_pos + Vector2(randf_range(3.0, 6.0), randf_range(-3.0, -6.0)), 0.6)
 		tween.tween_callback(func(): queue_free())
 	else:
 		queue_free()
+
+func _timing_icon(timing : String):
+	match timing:
+		'ok':
+			$ThumbsStartingAnimation/Effect.frame = 1
+		'good':
+			$ThumbsStartingAnimation/Effect.frame = 2
+		'perfect':
+			$ThumbsStartingAnimation/Effect.frame = 3
 
 func failed_animation():
 	if !is_send:
@@ -70,10 +80,9 @@ func failed_animation():
 		$RedOutline.scale = Vector2(2.9, 2.9) 
 		tween.tween_property($RedOutline, "scale", Vector2(3.1, 3.1), 0.6)
 		tween.tween_callback(func(): $RedOutline.visible = false)
-		$ThumbsStartingAnimation/Thumbs.visible = true
+		$ThumbsStartingAnimation/Effect.visible = true
 		var original_pos = $ThumbsStartingAnimation.position
-		$ThumbsStartingAnimation/Thumbs.frame = 1
-		$ThumbsStartingAnimation/Thumbs.flip_v = true
+		$ThumbsStartingAnimation/Effect.frame = 0
 		var shake_tween = create_tween()
 		shake_tween.tween_property($ThumbsStartingAnimation, "position", original_pos + Vector2(randf_range(3.0, 6.0), randf_range(-3.0, -6.0)), 0.6)
 		tween.tween_callback(func(): queue_free())

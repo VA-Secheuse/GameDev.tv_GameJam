@@ -144,18 +144,13 @@ func send_recipient_messages(sentences: Array, beat_ms: float):
 func _on_success(beat : int,timing : String):
 	var rec = _pop_rectangle_for_beat(beat)
 	if rec and is_instance_valid(rec):
-		rec.success_animation()
+		rec.success_animation(timing)
 
 func _on_failure(beat : int,timing : String):
 	var rec = _pop_rectangle_for_beat(beat)
 	if rec and is_instance_valid(rec):
 		rec.failed_animation()
 
-#func _process(delta: float) -> void:
-	#if(Input.is_action_just_pressed('Enter')):
-		#_new_player_speak_bubble('bo')
-	#if(Input.is_action_just_pressed("a_input")):
-		#_new_recipient_speak_bubble('oooooooaaaaaaaaaaaaa')
 
 func _new_player_speak_bubble(text : String):
 	var new_bubble = TextBubble.create_text_bubble(text_bubble_container)
