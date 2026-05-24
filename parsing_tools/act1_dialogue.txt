@@ -15,4 +15,15 @@ R WHAT!
 P Yeah! I helped you for free already! / Now that you got the free sample / I need an advance for the next job..
 R Alright then... / meet me in 30 minutes at Ben's
 P Got it partner! / Pleasure doing business with you
-R 2               -------April 12-------
+R 2           -------April 12------- / You owe me the next burger
+P WHAAAT IT WAS MY PAYMENT
+R I THOUGHT YOU WERE GONNA EAT 1 BURGER! / NOT 3!!!
+P FREE BURGERS!!! / I COULDNT MISS ON THAT / But you know what next one's on me / BUT DONT TAKE TO MUCH FOOD!!!
+R I cant promise anything..
+P Wait!!! / So there will be a next time ;)
+R Dont get your hopes up / Its just because I want my burger back! / Nothing more!
+P Ok sure :p / Well if by any chance / You want ur free burger / We could go on friday!
+R I'm free friday / BUT JUST BECAUSE I WANT MY BURGER / Nothing else
+P We will see about that ;p / See you friday!!!
+R See you friday...
+P <3

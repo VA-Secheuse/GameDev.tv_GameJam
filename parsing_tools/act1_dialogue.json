@@ -205,6 +205,139 @@
                     "with",
                     "you"
                 ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "WHAAAT",
+                    "IT",
+                    "WAS",
+                    "MY",
+                    "PAYMENT"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "FREE",
+                    "BURGERS!!!"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "I",
+                    "COULDNT",
+                    "MISS",
+                    "ON",
+                    "THAT"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "But",
+                    "you",
+                    "know",
+                    "what",
+                    "next",
+                    "one's",
+                    "on",
+                    "me"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "BUT",
+                    "DONT",
+                    "TAKE",
+                    "TO",
+                    "MUCH",
+                    "FOOD!!!"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "Wait!!!"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "So",
+                    "there",
+                    "will",
+                    "be",
+                    "a",
+                    "next",
+                    "time",
+                    ";)"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "Ok",
+                    "sure",
+                    ":p"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "Well",
+                    "if",
+                    "by",
+                    "any",
+                    "chance"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "You",
+                    "want",
+                    "ur",
+                    "free",
+                    "burger"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "We",
+                    "could",
+                    "go",
+                    "on",
+                    "friday!"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "We",
+                    "will",
+                    "see",
+                    "about",
+                    "that",
+                    ";p"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "See",
+                    "you",
+                    "friday!!!"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "<3"
+                ]
             }
         ]
     },
@@ -284,8 +417,52 @@
                 "sentence": "meet me in 30 minutes at Ben's"
             },
             {
+                "is_end": "no",
+                "sentence": "2           -------April 12-------"
+            },
+            {
                 "is_end": "yes",
-                "sentence": "2               -------April 12-------"
+                "sentence": "You owe me the next burger"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I THOUGHT YOU WERE GONNA EAT 1 BURGER!"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "NOT 3!!!"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "I cant promise anything.."
+            },
+            {
+                "is_end": "no",
+                "sentence": "Dont get your hopes up"
+            },
+            {
+                "is_end": "no",
+                "sentence": "Its just because I want my burger back!"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "Nothing more!"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I'm free friday"
+            },
+            {
+                "is_end": "no",
+                "sentence": "BUT JUST BECAUSE I WANT MY BURGER"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "Nothing else"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "See you friday..."
             }
         ]
     }
