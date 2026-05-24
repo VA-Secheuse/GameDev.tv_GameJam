@@ -1,8 +1,16 @@
 [gd_resource type="Resource" script_class="Track" format=3 uid="uid://bv4ew841d0pwo"]
 
+[ext_resource type="AudioStream" uid="uid://ciht57eufdwlt" path="res://assets/music/track1/vachierjosh.mp3" id="1_0omxu"]
 [ext_resource type="Script" uid="uid://b7rr1hmt81koj" path="res://game/Ressources/track.gd" id="1_wnwkn"]
+[ext_resource type="JSON" path="res://game/Ressources/Track/act_1_track/act1_chart.json" id="2_0omxu"]
+[ext_resource type="JSON" path="res://game/Ressources/Track/act_1_track/act1_dialogue.json" id="3_1c5es"]
 
 [resource]
 script = ExtResource("1_wnwkn")
-act = "act1"
+act = "act_1"
+audio_stream = ExtResource("1_0omxu")
+bmp = 280
+margin = 400.0
+button_mapping = ExtResource("2_0omxu")
+dialogue_file = ExtResource("3_1c5es")
 metadata/_custom_type_script = "uid://b7rr1hmt81koj"

@@ -99,7 +99,7 @@ func prep_third_act() -> void:
 	timer.start()
 
 func start_first_act() -> void:
-	await $RhythmManager.load_level(load("res://game/Ressources/Track/act_2_track/act3_act.tres"))
+	await $RhythmManager.load_level(load("res://game/Ressources/Track/act_1_track/act_1_track.tres"))
 	await start_level_phone.scale_to($RhythmManager.left_corner.global_position,Vector2(2.5,2.5),0.5)
 	$RhythmManager.visible = true
 	$RhythmManager.start_level()
