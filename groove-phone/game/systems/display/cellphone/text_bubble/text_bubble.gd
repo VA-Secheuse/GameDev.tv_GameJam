@@ -12,14 +12,6 @@ static func create_text_bubble(node : Node) -> TextBubble:
 	return text_bubble
 
 func set_text(new_text : String, side : bool):
-	
-	##THIS IS FOR SHOWING DATE ITS UGLY
-	if new_text[0] == '2' && !side:
-		var dat_str = new_text.substr(1)
-		self.set_flip(true)
-		$NinetTileRec.visible = false
-		$MarginContainer/Text.add_theme_color_override("font_color", Color.BLACK)
-	
 	if new_text == _current_text:
 		return
 	_current_text = new_text
@@ -37,6 +29,14 @@ func set_text(new_text : String, side : bool):
 		self.set_flip(true)
 		$NinetTileRec.visible = false
 		$Recipient.visible = true
+		
+	##THIS IS FOR SHOWING DATE ITS UGLY
+	if new_text[0] == '2' && !side:
+		new_text = new_text.substr(1)
+		self.set_flip(true)
+		$NinetTileRec.visible = false
+		$MarginContainer/Text.text = new_text
+		$MarginContainer/Text.modulate = Color(0.0, 0.0, 0.0, 1.0)
 	emit_signal("ready_to_position")
 
 func set_flip(is_player: bool):
