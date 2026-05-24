@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c3o7o14vca7rl"
+path="res://.godot/imported/UI_hit_note_good.wav-172b06fc3eb88626db25faba6f6e751b.sample"
+
+[deps]
+
+source_file="res://assets/sound_effect/Note Hits SFX/UI_hit_note_good.wav"
+dest_files=["res://.godot/imported/UI_hit_note_good.wav-172b06fc3eb88626db25faba6f6e751b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

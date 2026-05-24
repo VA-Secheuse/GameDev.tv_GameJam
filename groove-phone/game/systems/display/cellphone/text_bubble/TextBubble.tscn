@@ -57,5 +57,6 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
 text = "a"
 label_settings = ExtResource("3_43s5s")
