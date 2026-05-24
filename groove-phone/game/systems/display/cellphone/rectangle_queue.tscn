@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://6mwmw772i3yj" path="res://assets/sprite/Effect/Note_validation_icon.png" id="6_dvju4"]
 [ext_resource type="Texture2D" uid="uid://ctmm1ddd1rva" path="res://assets/sprite/Effect/red_outline.png" id="6_xk10q"]
 [ext_resource type="Texture2D" uid="uid://byy0p42iegy41" path="res://assets/sprite/Buttons/Barre_Send.png" id="7_dvju4"]
+[ext_resource type="Texture2D" uid="uid://bbv4571byrk03" path="res://assets/sprite/Buttons/send_highlight.png" id="8_21bpl"]
+[ext_resource type="Texture2D" uid="uid://demqtwbr7sstm" path="res://assets/sprite/Buttons/send_highlight_red.png" id="9_bdfp0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8kobb"]
 font = ExtResource("3_euwb3")
@@ -58,6 +60,40 @@ position = Vector2(3.0000002, 5.9604645e-08)
 scale = Vector2(2.9, 2.9)
 texture = ExtResource("6_xk10q")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1563516402]
+
+[node name="Send" type="Sprite2D" parent="." unique_id=324108062]
+visible = false
+texture_filter = 1
+position = Vector2(1.0000005, -1)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("7_dvju4")
+
+[node name="Marker2D" type="Marker2D" parent="Send" unique_id=1768211148]
+visible = false
+position = Vector2(116.52174, -11.304347)
+
+[node name="Label" type="Label" parent="Send" unique_id=1996746876]
+texture_filter = 1
+offset_left = -17.391306
+offset_top = -7.391305
+offset_right = 22.608694
+offset_bottom = 15.608695
+theme_override_fonts/font = ExtResource("3_euwb3")
+text = "SPACE"
+
+[node name="send_highlight" type="Sprite2D" parent="." unique_id=473960153]
+visible = false
+texture_filter = 1
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("8_21bpl")
+
+[node name="send_red" type="Sprite2D" parent="." unique_id=1668118523]
+visible = false
+texture_filter = 1
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("9_bdfp0")
+
 [node name="ThumbsStartingAnimation" type="Marker2D" parent="." unique_id=75823730]
 position = Vector2(72, -24)
 
@@ -67,12 +103,3 @@ texture_filter = 1
 position = Vector2(4.7683716e-07, 0)
 texture = ExtResource("6_dvju4")
 hframes = 4
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1563516402]
-
-[node name="Send" type="Sprite2D" parent="." unique_id=324108062]
-visible = false
-texture_filter = 1
-position = Vector2(1.0000005, -1)
-scale = Vector2(2.3, 2.3)
-texture = ExtResource("7_dvju4")

@@ -92,6 +92,7 @@ func reset_and_hide():
 	still_in_menu = false
 	$NotifBubble.visible = false
 	$NotifLogo.visible = false
+	$PhoneSprite.material.set_shader_parameter("outline_width", 0)
 
 func scale_to(target_left_corner: Vector2, target_scale: Vector2, duration: float = 0.5) -> void:
 	var old_position = self.global_position

@@ -60,7 +60,19 @@ func success_animation(timing : String):
 		shake_tween.tween_property($ThumbsStartingAnimation, "position", original_pos + Vector2(randf_range(3.0, 6.0), randf_range(-3.0, -6.0)), 0.6)
 		tween.tween_callback(func(): queue_free())
 	else:
-		queue_free()
+		if move_tween: move_tween.kill() 
+		var tween = create_tween()
+		$send_highlight.visible = true
+		$send_highlight.scale = Vector2(2.3, 2.3) 
+		modulate.a = 1.0
+		tween.tween_property($send_highlight, "scale", Vector2(2.35, 2.35), 0.4)
+		tween.tween_callback(func(): $send_highlight.visible = false)
+		$ThumbsStartingAnimation/Effect.global_position = $Send/Marker2D.global_position
+		$ThumbsStartingAnimation/Effect.visible = true
+		var original_pos = $Send/Marker2D.global_position
+		var shake_tween = create_tween()
+		shake_tween.tween_property($ThumbsStartingAnimation/Effect, "global_position", original_pos + Vector2(randf_range(3.0, 6.0), randf_range(-3.0, -6.0)), 0.4)
+		tween.tween_callback(func(): queue_free())
 
 func _timing_icon(timing : String):
 	match timing:
@@ -84,10 +96,23 @@ func failed_animation():
 		var original_pos = $ThumbsStartingAnimation.position
 		$ThumbsStartingAnimation/Effect.frame = 0
 		var shake_tween = create_tween()
-		shake_tween.tween_property($ThumbsStartingAnimation, "position", original_pos + Vector2(randf_range(3.0, 6.0), randf_range(-3.0, -6.0)), 0.6)
+		shake_tween.tween_property($ThumbsStartingAnimation, "position", original_pos + Vector2(randf_range(3.0, 6.0), randf_range(-3.0, -6.0)), 0.3)
 		tween.tween_callback(func(): queue_free())
 	else:
-		queue_free()
+		if move_tween: move_tween.kill() 
+		var tween = create_tween()
+		modulate.a = 1.0
+		$send_red.visible = true
+		$send_red.scale = Vector2(2.3, 2.3) 
+		tween.tween_property($send_red, "scale", Vector2(2.35, 2.35), 0.4)
+		tween.tween_callback(func(): $send_red.visible = false)
+		$ThumbsStartingAnimation/Effect.global_position = $Send/Marker2D.global_position
+		$ThumbsStartingAnimation/Effect.visible = true
+		var original_pos = $Send/Marker2D.global_position
+		$ThumbsStartingAnimation/Effect.frame = 0
+		var shake_tween = create_tween()
+		shake_tween.tween_property($ThumbsStartingAnimation/Effect, "global_position", original_pos + Vector2(randf_range(3.0, 6.0), randf_range(-3.0, -6.0)), 0.4)
+		tween.tween_callback(func(): queue_free())
 
 func get_height():
 	return $Rectangle.texture.get_height()

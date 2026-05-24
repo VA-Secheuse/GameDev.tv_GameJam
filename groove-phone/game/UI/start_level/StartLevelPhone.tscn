@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dl284l232e531" path="res://assets/sprite/Effect/notif_dot.png" id="5_mkj65"]
 [ext_resource type="Texture2D" uid="uid://cje0gnekugw46" path="res://assets/sprite/Buttons/Fleche_back.png" id="6_pjsho"]
 [ext_resource type="Script" uid="uid://bcxqhw05w4c0" path="res://game/UI/buttons/phone_buttons.gd" id="7_cpkh7"]
+[ext_resource type="Texture2D" uid="uid://cv1jdkwsopsy7" path="res://assets/sprite/UI/Barre_cell.png" id="8_2tob8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qrpec"]
 shader = ExtResource("2_1llvt")
@@ -48,6 +49,11 @@ material = SubResource("ShaderMaterial_qrpec")
 position = Vector2(0, 184)
 texture = ExtResource("3_1llvt")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1673473456]
+texture_filter = 1
+position = Vector2(1, 35)
+texture = ExtResource("8_2tob8")
+
 [node name="Area2D" type="Area2D" parent="." unique_id=1126944621]
 position = Vector2(0, 55)
 
@@ -70,10 +76,10 @@ texture = ExtResource("5_mkj65")
 texture_filter = 1
 material = SubResource("ShaderMaterial_cpkh7")
 custom_minimum_size = Vector2(40, 30)
-offset_left = -108.0
-offset_top = 33.0
-offset_right = -68.0
-offset_bottom = 63.0
+offset_left = -109.0
+offset_top = 42.0
+offset_right = -69.0
+offset_bottom = 72.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_2tob8")
