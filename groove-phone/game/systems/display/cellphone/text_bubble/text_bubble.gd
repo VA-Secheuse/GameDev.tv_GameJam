@@ -18,6 +18,7 @@ func set_text(new_text : String, side : bool):
 		var dat_str = new_text.substr(1)
 		self.set_flip(true)
 		$NinetTileRec.visible = false
+		$MarginContainer/Text.add_theme_color_override("font_color", Color.BLACK)
 	
 	if new_text == _current_text:
 		return
