@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bhexbfnsv3u3g" path="res://game/UI/level_selection/level_selection.gd" id="2_joefn"]
 [ext_resource type="Shader" uid="uid://dxjelj6hl35p" path="res://game/UI/start_level/StartLevelPhone.gdshader" id="3_7p5fm"]
 [ext_resource type="Texture2D" uid="uid://cje0gnekugw46" path="res://assets/sprite/Buttons/Fleche_back.png" id="3_70x7a"]
+[ext_resource type="Texture2D" uid="uid://cpim6agh8ocig" path="res://assets/sprite/cellphone_background.png" id="3_c6a2j"]
 [ext_resource type="Script" uid="uid://bcxqhw05w4c0" path="res://game/UI/buttons/phone_buttons.gd" id="4_5i3bd"]
 [ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="5_l23jo"]
 [ext_resource type="Texture2D" uid="uid://cv1jdkwsopsy7" path="res://assets/sprite/UI/Barre_cell.png" id="7_tf4nk"]
@@ -30,6 +31,14 @@ scale = Vector2(1.8, 1.8)
 texture = ExtResource("1_vhirw")
 script = ExtResource("2_joefn")
 left_corner = NodePath("LeftCorner")
+
+[node name="CellphoneBackground" type="Sprite2D" parent="." unique_id=1458320973]
+position = Vector2(178.33334, 128.8889)
+rotation = -1.5707964
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("3_c6a2j")
+region_enabled = true
+region_rect = Rect2(10, 0, 240, 357)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=703482869]
 texture_filter = 1

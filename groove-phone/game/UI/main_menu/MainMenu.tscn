@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dhvg2lllaxvk8" path="res://game/UI/main_menu/main_menu.gd" id="1_rmjxk"]
 [ext_resource type="FontFile" uid="uid://dlioe6s6bh5ew" path="res://assets/font/monogram.ttf" id="2_8ovyh"]
+[ext_resource type="Texture2D" uid="uid://cpim6agh8ocig" path="res://assets/sprite/cellphone_background.png" id="3_6fyih"]
 [ext_resource type="Texture2D" uid="uid://dyns8jaw0gnq1" path="res://assets/sprite/Cellphone_full_art.png" id="3_ku3nx"]
 [ext_resource type="Texture2D" uid="uid://cv1jdkwsopsy7" path="res://assets/sprite/UI/Barre_cell.png" id="3_q3uw7"]
 [ext_resource type="Script" uid="uid://bcxqhw05w4c0" path="res://game/UI/buttons/phone_buttons.gd" id="4_ku3nx"]
@@ -38,6 +39,10 @@ offset_right = 39.0
 offset_bottom = 376.0
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("3_ku3nx")
+
+[node name="CellphoneBackground" type="Sprite2D" parent="Panel/TextureRect" unique_id=243467013]
+position = Vector2(129.99998, 187.22223)
+texture = ExtResource("3_6fyih")
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/TextureRect" unique_id=40630898]
 texture_filter = 1

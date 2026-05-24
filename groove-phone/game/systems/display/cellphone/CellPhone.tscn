@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ckkic2i45tc7p" path="res://game/systems/display/cellphone/cellphone.gd" id="1_33wg6"]
 [ext_resource type="Texture2D" uid="uid://c727vjxdnkr2m" path="res://assets/sprite/Cellphone.png" id="2_iw8gi"]
 [ext_resource type="LabelSettings" uid="uid://cs1svpb58fd0a" path="res://game/Ressources/text_style/normal_texting.tres" id="3_a62kn"]
+[ext_resource type="Texture2D" uid="uid://cpim6agh8ocig" path="res://assets/sprite/cellphone_background.png" id="3_n4bbi"]
 [ext_resource type="PackedScene" uid="uid://jfmierf42v6o" path="res://game/systems/display/cellphone/top_bar/top_bar.tscn" id="4_6e6ux"]
 [ext_resource type="Script" uid="uid://cx5047ytxbvf3" path="res://game/systems/display/cellphone/loose_level_menu.gd" id="5_33lyt"]
 [ext_resource type="Texture2D" uid="uid://ceh2beydbyc6k" path="res://assets/sprite/UI/No_Wifi.png" id="5_h6r8v"]
@@ -18,6 +19,13 @@ top_bar = NodePath("TopBar")
 texture_filter = 1
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_iw8gi")
+
+[node name="CellphoneBackground" type="Sprite2D" parent="SpriteCellphone" unique_id=899969662]
+position = Vector2(0, -21.6)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("3_n4bbi")
+region_enabled = true
+region_rect = Rect2(0, 0, 260, 233)
 
 [node name="A" type="Label" parent="SpriteCellphone" unique_id=2071592252]
 texture_filter = 1

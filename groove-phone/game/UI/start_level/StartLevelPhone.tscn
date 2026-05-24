@@ -4,6 +4,7 @@
 [ext_resource type="Shader" uid="uid://dxjelj6hl35p" path="res://game/UI/start_level/StartLevelPhone.gdshader" id="2_1llvt"]
 [ext_resource type="Texture2D" uid="uid://sacrfxmfgbph" path="res://assets/sprite/Effect/notif_bubble.png" id="2_qrpec"]
 [ext_resource type="Texture2D" uid="uid://bq6idy3q0hr88" path="res://assets/sprite/Cellphone_full_art_sideway_with_space.png" id="3_1llvt"]
+[ext_resource type="Texture2D" uid="uid://cpim6agh8ocig" path="res://assets/sprite/cellphone_background.png" id="5_2iqdn"]
 [ext_resource type="Texture2D" uid="uid://dl284l232e531" path="res://assets/sprite/Effect/notif_dot.png" id="5_mkj65"]
 [ext_resource type="Texture2D" uid="uid://cje0gnekugw46" path="res://assets/sprite/Buttons/Fleche_back.png" id="6_pjsho"]
 [ext_resource type="Script" uid="uid://bcxqhw05w4c0" path="res://game/UI/buttons/phone_buttons.gd" id="7_cpkh7"]
@@ -48,6 +49,12 @@ texture_filter = 1
 material = SubResource("ShaderMaterial_qrpec")
 position = Vector2(0, 184)
 texture = ExtResource("3_1llvt")
+
+[node name="CellphoneBackground" type="Sprite2D" parent="PhoneSprite" unique_id=2022656928]
+position = Vector2(1.1920929e-07, 3.0000038)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("5_2iqdn")
+region_rect = Rect2(0, 0, 260, 233)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1673473456]
 texture_filter = 1
