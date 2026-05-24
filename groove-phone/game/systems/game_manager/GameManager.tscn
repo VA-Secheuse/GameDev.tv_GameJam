@@ -67,4 +67,6 @@ offset_right = 640.0
 offset_bottom = 360.0
 
 [connection signal="start_first_act" from="StartLevelPhone" to="." method="start_first_act"]
+[connection signal="start_second_act" from="StartLevelPhone" to="." method="start_second_act"]
+[connection signal="start_third_act" from="StartLevelPhone" to="." method="start_third_act"]
 [connection signal="exit_pressed" from="UI/MainMenu" to="." method="_on_main_menu_exit_pressed"]
