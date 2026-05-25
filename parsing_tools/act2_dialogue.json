@@ -1,0 +1,698 @@
+[
+    {
+        "speaker": "P",
+        "dialogue": [
+            {
+                "is_end": "no",
+                "sentence": [
+                    "Hey"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "How",
+                    "are",
+                    "you",
+                    "doing?"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "I'm",
+                    "sorry..."
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "Really..."
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "So",
+                    "hmmm",
+                    "how",
+                    "was",
+                    "ur",
+                    "trip?"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "Ur",
+                    "gone",
+                    "for",
+                    "5",
+                    "weeks!!!"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "And",
+                    "its",
+                    "only",
+                    "\"Not",
+                    "that",
+                    "bad\"",
+                    "???"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "I",
+                    "have",
+                    "no",
+                    "idea"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "What",
+                    "was",
+                    "I",
+                    "expecting"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "Maybe",
+                    "a",
+                    "little",
+                    "more",
+                    "than",
+                    "that"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "What",
+                    "did",
+                    "you",
+                    "do",
+                    "or",
+                    "eat",
+                    "or",
+                    "idk",
+                    "something!"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "But",
+                    "no",
+                    "of",
+                    "course",
+                    "you",
+                    "have",
+                    "nothing",
+                    "to",
+                    "say!"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "UR",
+                    "NEVER",
+                    "IN",
+                    "THE",
+                    "MOOD"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "I",
+                    "CAN",
+                    "BARELY",
+                    "TALK",
+                    "TO",
+                    "YOU"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "UR",
+                    "ALWAYS",
+                    "TOO",
+                    "BUSY"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "TOO",
+                    "OCCUPIED"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "OR",
+                    "ITS",
+                    "TO",
+                    "LATE",
+                    "TO",
+                    "TALK"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "ITS",
+                    "NEVER",
+                    "A",
+                    "GOOD",
+                    "TIME",
+                    "FOR",
+                    "YOU"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "I'M",
+                    "SORRY"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "IF",
+                    "I'M",
+                    "SOOO",
+                    "EXHAUSTING"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "I'M",
+                    "WORRIED",
+                    "ABOUT",
+                    "YOU",
+                    "OK"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "YOU",
+                    "DON'T",
+                    "TALK",
+                    "TO",
+                    "ME",
+                    "ANYMORE"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "Why",
+                    "didn't",
+                    "you",
+                    "told",
+                    "me"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "I",
+                    "could've",
+                    "helped",
+                    "you"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "I",
+                    "didn't",
+                    "want",
+                    "to",
+                    "annoyed",
+                    "you"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "You",
+                    "know",
+                    "I",
+                    "love",
+                    "you"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "More",
+                    "than",
+                    "anything"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "But",
+                    "there",
+                    "is",
+                    "a",
+                    "limit"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "You",
+                    "were",
+                    "always",
+                    "out"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "And",
+                    "when",
+                    "you",
+                    "finally",
+                    "came",
+                    "back"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "You",
+                    "ignored",
+                    "me"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "See",
+                    "you",
+                    "there",
+                    "then..."
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "Leave",
+                    "me",
+                    "alone!"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "WHAT",
+                    "DID",
+                    "YOU",
+                    "DO?!?"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "FIRST",
+                    "OFF",
+                    "ALL"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "YOU",
+                    "GAVE",
+                    "ME",
+                    "PEANUTS",
+                    "TO",
+                    "EAT"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "HOW",
+                    "DO",
+                    "YOU",
+                    "NOT",
+                    "KNOW",
+                    "I'M",
+                    "ALLERGIC"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "WE'VE",
+                    "BEEN",
+                    "TOGETHER",
+                    "FOR",
+                    "4",
+                    "YEARS",
+                    "NOW"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "BUT",
+                    "IF",
+                    "THAT",
+                    "WAS",
+                    "THE",
+                    "ONLY",
+                    "THING"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "BUT",
+                    "NO",
+                    "YOU",
+                    "STARTED",
+                    "TO",
+                    "MAKE",
+                    "FUN",
+                    "OFF",
+                    "ME"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "INFRONT",
+                    "OF",
+                    "EVERYONE!!"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "AND",
+                    "THE",
+                    "WORST",
+                    "OFF",
+                    "THEM",
+                    "ALL"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "YOU",
+                    "DIDNT",
+                    "EVEN",
+                    "KISSED",
+                    "ME",
+                    "AT",
+                    "MIDNIGHT"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "YOU",
+                    "WERE",
+                    "TOO",
+                    "BUSY",
+                    "IN",
+                    "THE",
+                    "BATHROOM!!!"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "OF",
+                    "COURSE",
+                    "NOT!"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "HOW",
+                    "CAN",
+                    "YOU",
+                    "MISS",
+                    "MIDNIGHT!!!"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "WE",
+                    "WONT"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "YOU",
+                    "NEVER",
+                    "LISTEN!"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "WELL"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "TELL",
+                    "THEM",
+                    "THAT",
+                    "YOU",
+                    "DONT",
+                    "CARE",
+                    "ABOUT",
+                    "ME"
+                ]
+            },
+            {
+                "is_end": "no",
+                "sentence": [
+                    "THAT",
+                    "YOU",
+                    "LEFT",
+                    "ME",
+                    "ALONE"
+                ]
+            },
+            {
+                "is_end": "yes",
+                "sentence": [
+                    "AND",
+                    "YOU",
+                    "HAVE",
+                    "NO",
+                    "IDEA",
+                    "WHERE",
+                    "I",
+                    "AM"
+                ]
+            }
+        ]
+    },
+    {
+        "speaker": "R",
+        "dialogue": [
+            {
+                "is_end": "yes",
+                "sentence": "Good"
+            },
+            {
+                "is_end": "no",
+                "sentence": "Its all good"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "Just dont worry about it"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "Not that bad"
+            },
+            {
+                "is_end": "no",
+                "sentence": "Yeah well"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I dont know"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "What do you want me to say..."
+            },
+            {
+                "is_end": "no",
+                "sentence": "I have nothing interesting to say"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "Anyways I'm not in the mood of texting"
+            },
+            {
+                "is_end": "no",
+                "sentence": "BECAUSE IT IS!!!"
+            },
+            {
+                "is_end": "no",
+                "sentence": "UR ALWAYS TRYING TO TALK TO ME"
+            },
+            {
+                "is_end": "no",
+                "sentence": "ITS EXHAUSTING!!!"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I'M SORRY"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "BUT I HAVE A LOT OF THINGS TO DO"
+            },
+            {
+                "is_end": "no",
+                "sentence": "Bye.."
+            },
+            {
+                "is_end": "no",
+                "sentence": "I need to rest"
+            },
+            {
+                "is_end": "no",
+                "sentence": "2           -------September 24-------"
+            },
+            {
+                "is_end": "no",
+                "sentence": "Hey.."
+            },
+            {
+                "is_end": "no",
+                "sentence": "How are you doing"
+            },
+            {
+                "is_end": "no",
+                "sentence": "Its been some time since we last spoke"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I'm really sorry for last time"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I was so overwhelmed"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I bit off more than I could chew"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "and that did so much damage around me"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "Me too"
+            },
+            {
+                "is_end": "no",
+                "sentence": "... I'm sorry"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I'm back tomorrow"
+            },
+            {
+                "is_end": "no",
+                "sentence": "Maybe I can invite you to a burger"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "So you can forgive me?"
+            },
+            {
+                "is_end": "no",
+                "sentence": "2           -------January 1-------"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "WHY DID YOU LEAVE?!?"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "WHAT DID I DO THIS TIME?"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I DIDNT NOTICE IT WAS MIDNIGHT"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "I KISSED YOU AFTER DIDNT THAT COUNT?"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I'm sorry, just comeback"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "lets just talk"
+            },
+            {
+                "is_end": "no",
+                "sentence": "Please come back"
+            },
+            {
+                "is_end": "no",
+                "sentence": "They are asking me where did you go"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "I dont know what to tell them!"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I CARE ABOUT YOU!"
+            },
+            {
+                "is_end": "no",
+                "sentence": "YOU KNOW I'VE BEEN DEALING WITH A LOT"
+            },
+            {
+                "is_end": "no",
+                "sentence": "I'M TRYING MY BEST"
+            },
+            {
+                "is_end": "yes",
+                "sentence": "BUT I CAN SEE THAT ITS NEVER ENOUGH"
+            }
+        ]
+    }
+]

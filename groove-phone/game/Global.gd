@@ -18,8 +18,8 @@ var game_manager : GameManager
 var score_dic : Dictionary = {'act_1' : 0,'act_2' : 0, 'act_3' : 0}
 
 ##Unlocks
-var act_2_unlocked : bool = false
-var act_3_unlocked : bool = false
+var act_2_unlocked : bool = true
+var act_3_unlocked : bool = true
 
 ##When called unlock the next act
 func UNLOCK_NEXT_ACT():

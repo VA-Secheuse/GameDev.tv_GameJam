@@ -66,4 +66,4 @@ def txt_to_chart(txt_path: str, output_path: str):
 
     print(f"Done → {output_path} ({len(beats)} beats)")
 
-txt_to_chart("act1_chart.txt", "act1_chart.json")
+txt_to_chart("act2_chart.txt", "act2_chart.json")

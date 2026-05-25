@@ -28,7 +28,7 @@ func set_track_bmp(track : Track) -> void :
 	self.track_bmp = track.bmp
 	self.beat_duration_ms = (60.0 / self.track_bmp) * 1000.0
 	self.margin_ms = track.margin
-	self.last_beat = 0
+	self.last_beat = 0 
 	self.travel_time_sec = (beat_duration_ms * 8.0) /1000.0 
 	self.next_beat_position = beat_duration_ms
 	self.active_beat_start_position = self.next_beat_position - self.margin_ms  

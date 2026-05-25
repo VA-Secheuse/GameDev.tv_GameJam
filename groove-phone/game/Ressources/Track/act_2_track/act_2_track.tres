@@ -2,9 +2,15 @@
 
 [ext_resource type="Script" uid="uid://b7rr1hmt81koj" path="res://game/Ressources/track.gd" id="1_d45cm"]
 [ext_resource type="AudioStream" uid="uid://baaqxra27g47b" path="res://assets/music/track2/jveuxdormir.mp3" id="1_r46ng"]
+[ext_resource type="JSON" path="res://game/Ressources/Track/act_2_track/act2_chart.json" id="2_vh8t2"]
+[ext_resource type="JSON" path="res://game/Ressources/Track/act_2_track/act2_dialogue.json" id="3_nuyij"]
 
 [resource]
 script = ExtResource("1_d45cm")
 act = "act_2"
 audio_stream = ExtResource("1_r46ng")
+bmp = 330
+margin = 200.0
+button_mapping = ExtResource("2_vh8t2")
+dialogue_file = ExtResource("3_nuyij")
 metadata/_custom_type_script = "uid://b7rr1hmt81koj"
