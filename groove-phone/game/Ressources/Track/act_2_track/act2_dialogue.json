@@ -5,6 +5,116 @@
 			{
 				"is_end": "no",
 				"sentence": [
+                    "Hiii"
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"I'm",
+					"so",
+					"happy",
+					"ur",
+					"coming",
+                    "back!"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"I",
+					"hope",
+					"your",
+					"doing",
+                    "well"
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"Even",
+					"though",
+					"you",
+                    "know..."
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"If",
+					"you",
+					"need",
+                    "anything"
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"Just",
+					"tell",
+					"me",
+                    "ok?"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"I",
+                    "understand"
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"Just",
+					"dont",
+					"forget",
+					"about",
+					"me",
+                    "ok?"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"I",
+					"love",
+					"you",
+                    "too"
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"I",
+					"need",
+					"to",
+					"go",
+					"but",
+					"dont",
+					"hesitate",
+                    "ok?"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"See",
+					"you",
+                    "soon"
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"I",
+					"love",
+                    "you!"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
                     "Hey"
 				]
 			},
@@ -515,12 +625,225 @@
 					"I",
                     "AM"
 				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"OF",
+					"COURSE",
+					"ITS",
+                    "NOT"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"YOUR",
+					"LEAVING",
+					"ME",
+                    "ASIDE"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"YOU",
+					"DONT",
+					"TELL",
+					"ME",
+					"WHATS",
+					"GOING",
+                    "ON"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"I",
+					"CAN",
+					"FEEL",
+					"THAT",
+					"SOMETHING'S",
+                    "WRONG"
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"I",
+					"JUST",
+					"DONT",
+					"KNOW",
+                    "WHAT"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"NO",
+					"I",
+                    "WONT"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"I'VE",
+					"HAD",
+					"ENOUGH",
+					"OF",
+                    "IT"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"YOUR",
+					"ALWAYS",
+					"THINKING",
+					"ONLY",
+					"ABOUT",
+                    "YOU"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"YOUR",
+					"SLOWLY",
+					"KILLING",
+                    "ME"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"MAKING",
+					"ME",
+					"WAIT",
+					"CRAVING",
+					"FOR",
+					"UR",
+                    "ATTENTION"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"LIKE",
+					"SOME",
+					"PUPPY",
+					"WAITING",
+					"FOR",
+					"A",
+                    "TREAT"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"I",
+					"CANT",
+					"STAND",
+					"IT",
+                    "ANYMORE"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"I",
+					"WONT",
+					"COME",
+                    "BACK"
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"PLEASE",
+					"LEAVE",
+					"ME",
+                    "ALONE"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"I'm",
+                    "sorry"
+				]
+			},
+			{
+				"is_end": "no",
+				"sentence": [
+					"I",
+					"just",
+                    "cant"
+				]
+			},
+			{
+				"is_end": "yes",
+				"sentence": [
+					"Have",
+					"a",
+					"great",
+                    "one"
+				]
 			}
 		]
 	},
 	{
 		"speaker": "R",
 		"dialogue": [
+			{
+				"is_end": "no",
+				"sentence": "Hey yeah me too!"
+			},
+			{
+				"is_end": "yes",
+				"sentence": "I feel like its been forever!"
+			},
+			{
+				"is_end": "no",
+				"sentence": "Dont worry about it"
+			},
+			{
+				"is_end": "yes",
+				"sentence": "I'm doing just ok"
+			},
+			{
+				"is_end": "no",
+				"sentence": "Dont worry I will"
+			},
+			{
+				"is_end": "yes",
+				"sentence": "I've just been dealing with a lot"
+			},
+			{
+				"is_end": "no",
+				"sentence": "I could never"
+			},
+			{
+				"is_end": "yes",
+				"sentence": "I love you"
+			},
+			{
+				"is_end": "no",
+				"sentence": "I wont"
+			},
+			{
+				"is_end": "yes",
+				"sentence": "See you soon"
+			},
+			{
+				"is_end": "no",
+				"sentence": "Me too"
+			},
+			{
+				"is_end": "yes",
+				"sentence": "2           -------June 16-------"
+			},
 			{
 				"is_end": "yes",
 				"sentence": "Good"
@@ -692,6 +1015,70 @@
 			{
 				"is_end": "yes",
 				"sentence": "BUT I CAN SEE THAT ITS NEVER ENOUGH"
+			},
+			{
+				"is_end": "yes",
+				"sentence": "Everything is fine please just come back"
+			},
+			{
+				"is_end": "no",
+				"sentence": "I CANT OK"
+			},
+			{
+				"is_end": "no",
+				"sentence": "OR THE ONLY THING LEFT I CARE ABOUT"
+			},
+			{
+				"is_end": "no",
+				"sentence": "I'VE LOST EVERYONE EXPECT YOU"
+			},
+			{
+				"is_end": "no",
+				"sentence": "I CANT LOSE YOU TOO PLEASE COME BACK"
+			},
+			{
+				"is_end": "no",
+				"sentence": "2           -------January 8-------"
+			},
+			{
+				"is_end": "no",
+				"sentence": "Its been a week"
+			},
+			{
+				"is_end": "no",
+				"sentence": "I miss you ok"
+			},
+			{
+				"is_end": "no",
+				"sentence": "I know I've done horrible things"
+			},
+			{
+				"is_end": "no",
+				"sentence": "But I need you back"
+			},
+			{
+				"is_end": "no",
+				"sentence": "I dont have anyone"
+			},
+			{
+				"is_end": "no",
+				"sentence": "Please dont go I need you"
+			},
+			{
+				"is_end": "no",
+				"sentence": "Please stay with me"
+			},
+			{
+				"is_end": "no",
+				"sentence": "I can change"
+			},
+			{
+				"is_end": "no",
+				"sentence": "I will change"
+			},
+			{
+				"is_end": "yes",
+				"sentence": "Just please give me a chance"
 			}
 		]
 	}
